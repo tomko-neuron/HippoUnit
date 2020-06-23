@@ -1,0 +1,11 @@
+{
+    "threshold_error": 1.2869609031104106, 
+    "prox_threshold_error": 1.0684614077849246, 
+    "dist_threshold_error": 1.6347314857701913, 
+    "nonlin_at_th_error": 2.3484256220714537, 
+    "nonlin_suprath_error": 2.670957597551988, 
+    "peak_deriv_error": 0.017853358569990554, 
+    "amp_at_th_error": 0.8695922962251478, 
+    "time_to_peak_error": 5.564728425149256, 
+    "async_nonlin_error": 0.9481819644540311
+}

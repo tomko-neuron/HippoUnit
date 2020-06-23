@@ -1,0 +1,13 @@
+Dendrites and locations to be tested: dist 210
+[['PyramidalCell[0].rad_thick1', 0.16666666666666666, 'prox'], ['PyramidalCell[0].rad_thick1', 0.8333333333333333, 'dist'], ['PyramidalCell[0].rad_medium1', 0.30000000000000004, 'prox'], ['PyramidalCell[0].rad_medium1', 0.7, 'dist']]
+---------------------------------------------------------------------------------------------------
+The built in Exp2Syn is used as the AMPA component. Tau1 = 0.4, Tau2 = 1.
+---------------------------------------------------------------------------------------------------
+The default NMDA model of HippoUnit is used with Jahr, Stevens voltage dependence.
+---------------------------------------------------------------------------------------------------
+The dendritic spike at dendrite PyramidalCell[0].rad_thick1(0.166666666667) generated somatic AP - this location is not used in the test
+---------------------------------------------------------------------------------------------------
+The dendritic spike at dendrite PyramidalCell[0].rad_thick1(0.833333333333) generated somatic AP - this location is not used in the test
+---------------------------------------------------------------------------------------------------
+ZScore_avg = 2.14
+---------------------------------------------------------------------------------------------------
