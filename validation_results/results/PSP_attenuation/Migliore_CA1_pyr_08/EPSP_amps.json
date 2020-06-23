@@ -1,0 +1,62 @@
+{
+    "('CA1_PC_cAC_sig6[0].apic[23]', 0.5)": {
+        "distance": 277.70759537327837, 
+        "EPSP_amp_dendrite": 0.9649266825562819, 
+        "EPSP_amp_soma": 0.12060922966905707
+    }, 
+    "('CA1_PC_cAC_sig6[0].apic[9]', 0.5)": {
+        "distance": 105.53075943470466, 
+        "EPSP_amp_dendrite": 0.5814534639653886, 
+        "EPSP_amp_soma": 0.2948059430837304
+    }, 
+    "('CA1_PC_cAC_sig6[0].apic[8]', 0.5)": {
+        "distance": 84.94903882775799, 
+        "EPSP_amp_dendrite": 0.46929361330006714, 
+        "EPSP_amp_soma": 0.32627907811094303
+    }, 
+    "('CA1_PC_cAC_sig6[0].apic[11]', 0.5)": {
+        "distance": 134.87160232249843, 
+        "EPSP_amp_dendrite": 0.7367179538125015, 
+        "EPSP_amp_soma": 0.24819269698254232
+    }, 
+    "('CA1_PC_cAC_sig6[0].apic[13]', 0.5)": {
+        "distance": 156.61747087881966, 
+        "EPSP_amp_dendrite": 0.796479588894428, 
+        "EPSP_amp_soma": 0.22077332038692532
+    }, 
+    "('CA1_PC_cAC_sig6[0].apic[27]', 0.5)": {
+        "distance": 310.3181220522086, 
+        "EPSP_amp_dendrite": 0.9647779561599492, 
+        "EPSP_amp_soma": 0.09729024090857763
+    }, 
+    "('CA1_PC_cAC_sig6[0].apic[19]', 0.5)": {
+        "distance": 201.2505260036186, 
+        "EPSP_amp_dendrite": 0.9187404504575198, 
+        "EPSP_amp_soma": 0.17957247558831568
+    }, 
+    "('CA1_PC_cAC_sig6[0].apic[0]', 0.8333333333333333)": {
+        "distance": 66.92888532291228, 
+        "EPSP_amp_dendrite": 0.4334711120088457, 
+        "EPSP_amp_soma": 0.34562911757713266
+    }, 
+    "('CA1_PC_cAC_sig6[0].apic[19]', 0.16666666666666666)": {
+        "distance": 175.85279775922666, 
+        "EPSP_amp_dendrite": 0.8543207998995825, 
+        "EPSP_amp_soma": 0.20209542826883364
+    }, 
+    "('CA1_PC_cAC_sig6[0].apic[21]', 0.5)": {
+        "distance": 249.03009828970883, 
+        "EPSP_amp_dendrite": 0.9482763304053634, 
+        "EPSP_amp_soma": 0.14303008943404905
+    }, 
+    "('CA1_PC_cAC_sig6[0].apic[31]', 0.5)": {
+        "distance": 335.71463287033407, 
+        "EPSP_amp_dendrite": 0.9539326714549645, 
+        "EPSP_amp_soma": 0.08129930036982103
+    }, 
+    "('CA1_PC_cAC_sig6[0].apic[19]', 0.8333333333333333)": {
+        "distance": 226.6482542480105, 
+        "EPSP_amp_dendrite": 0.9436277293898314, 
+        "EPSP_amp_soma": 0.15808767057667694
+    }
+}

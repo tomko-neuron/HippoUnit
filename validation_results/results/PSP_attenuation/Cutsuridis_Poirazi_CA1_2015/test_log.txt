@@ -1,0 +1,5 @@
+Dendritic locations to be tested (with their actual distances):
+{('CA1PyramidalCell[0].radTdist', 0.30000000000000004): 270.0, ('CA1PyramidalCell[0].radTprox', 0.8333333333333333): 93.33333333333334, ('CA1PyramidalCell[0].radTmed', 0.5): 160.0, ('CA1PyramidalCell[0].radTmed', 0.16666666666666666): 126.66666666666666, ('CA1PyramidalCell[0].radTmed', 0.8333333333333333): 193.33333333333334, ('CA1PyramidalCell[0].radTdist', 0.1): 230.0, ('CA1PyramidalCell[0].radTprox', 0.5): 60.0, ('CA1PyramidalCell[0].radTdist', 0.5): 310.0}
+---------------------------------------------------------------------------------------------------
+ZScore_avg = 4.59
+---------------------------------------------------------------------------------------------------
