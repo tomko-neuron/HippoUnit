@@ -1,0 +1,856 @@
+// Network cell template
+// CA1PyramidalCell
+// Geometry: 14 sections + axon
+// Active properties: from Poirazi et al, Neuron 2003
+// Adjusted to get more decrementing BPAP
+// BPG & VCU, 2-1-09
+
+begintemplate CA1PyramidalCell
+public is_art
+public init, topol, basic_shape, subsets, geom, biophys
+public pre_list, connect2target
+
+public soma, radTprox, radTmed, radTdist, lm_thick2, lm_medium2, lm_thin2
+public lm_thick1, lm_medium1, lm_thin1, oriprox1, oridist1, oriprox2, oridist2
+public obl1_2, obl1_1, obl2_2, obl2_1
+public axon
+public trunk_sec_list, oblique_dendrites
+
+objref pre_list, all, trunk_sec_list, oblique_dendrites
+
+proc init() {
+  topol()
+  subsets()
+  geom()
+  biophys()
+  geom_nseg()
+  pre_list = new List()
+  // synapses()
+}
+
+create soma, oriprox1, oridist1, oriprox2, oridist2, axon, radTprox
+create radTmed, radTdist, lm_thick2, lm_medium2, lm_thin2, lm_thick1, lm_medium1
+create lm_thin1, obl1_2, obl1_1, obl2_2, obl2_1
+
+proc topol() { local i
+  connect oriprox1(0), soma(0)
+  connect oridist1(0), oriprox1(1)
+  connect oriprox2(0), soma(1)
+  connect oridist2(0), oriprox2(1)
+  connect axon(0), soma(0)
+  connect radTprox(0), soma(1)
+  connect radTmed(0), radTprox(1)
+  connect radTdist(0), radTmed(1)
+  connect lm_thick2(0), radTdist(1)
+  connect lm_medium2(0), lm_thick2(1)
+  connect lm_thin2(0), lm_medium2(1)
+  connect lm_thick1(0), radTdist(1)
+  connect lm_medium1(0), lm_thick1(1)
+  connect lm_thin1(0), lm_medium1(1)
+  connect obl1_2(0), radTprox(1)
+  connect obl1_1(0), radTprox(1)
+  connect obl2_2(0), radTmed(1)
+  connect obl2_1(0), radTmed(1)
+  basic_shape()
+}
+proc basic_shape() {
+  soma {pt3dclear() pt3dadd(0, 0, 0, 1) pt3dadd(15, 0, 0, 1)}
+  oriprox1 {pt3dclear() pt3dadd(0, 0, 0, 1) pt3dadd(-14, -14, 0, 1)}
+  oridist1 {pt3dclear() pt3dadd(-14, -14, 0, 1) pt3dadd(-44, -29, 0, 1)}
+  oriprox2 {pt3dclear() pt3dadd(15, 0, 0, 1) pt3dadd(30, -14, 0, 1)}
+  oridist2 {pt3dclear() pt3dadd(30, -14, 0, 1) pt3dadd(60, -29, 0, 1)}
+  axon {pt3dclear() pt3dadd(0, 0, 0, 1) pt3dadd(0, -89, 0, 1)}
+  radTprox {pt3dclear() pt3dadd(15, 0, 0, 1) pt3dadd(15, 30, 0, 1)}
+  radTmed {pt3dclear() pt3dadd(15, 30, 0, 1) pt3dadd(15, 60, 0, 1)}
+  radTdist {pt3dclear() pt3dadd(15, 60, 0, 1) pt3dadd(15, 90, 0, 1)}
+  lm_thick2 {pt3dclear() pt3dadd(15, 90, 0, 1) pt3dadd(30, 105, 0, 1)}
+  lm_medium2 {pt3dclear() pt3dadd(30, 105, 0, 1) pt3dadd(45, 120, 0, 1)}
+  lm_thin2 {pt3dclear() pt3dadd(45, 120, 0, 1) pt3dadd(60, 135, 0, 1)}
+  lm_thick1 {pt3dclear() pt3dadd(15, 90, 0, 1) pt3dadd(0, 105, 0, 1)}
+  lm_medium1 {pt3dclear() pt3dadd(0, 105, 0, 1) pt3dadd(-14, 120, 0, 1)}
+  lm_thin1 {pt3dclear() pt3dadd(-14, 120, 0, 1) pt3dadd(-29, 135, 0, 1)}
+  obl1_2 {pt3dclear() pt3dadd(15, 30, 0, 1) pt3dadd(45, 45, 0, 1)}
+  obl1_1 {pt3dclear() pt3dadd(15, 30, 0, 1) pt3dadd(-14, 45, 0, 1)}
+  obl2_2 {pt3dclear() pt3dadd(15, 60, 0, 1) pt3dadd(30, 75, 0, 1)}
+  obl2_1 {pt3dclear() pt3dadd(15, 60, 0, 1) pt3dadd(-14, 90, 0, 1)}
+}
+
+proc subsets() { local i
+  all = new SectionList()
+    soma all.append()
+    oriprox1 all.append()
+    oridist1 all.append()
+    oriprox2 all.append()
+    oridist2 all.append()
+    axon all.append()
+    radTprox all.append()
+    radTmed all.append()
+    radTdist all.append()
+    lm_thick2 all.append()
+    lm_medium2 all.append()
+    lm_thin2 all.append()
+    lm_thick1 all.append()
+    lm_medium1 all.append()
+    lm_thin1 all.append()
+    obl1_2 all.append()
+    obl1_1 all.append()
+    obl2_2 all.append()
+    obl2_1 all.append()
+
+  trunk_sec_list = new SectionList()
+  radTprox trunk_sec_list.append()
+  radTmed trunk_sec_list.append()
+  radTdist trunk_sec_list.append()
+
+  oblique_dendrites = new SectionList()
+  //obl1_2 oblique_dendrites.append()
+  obl1_1 oblique_dendrites.append()
+  //obl2_2 oblique_dendrites.append()
+  obl2_1 oblique_dendrites.append()
+}
+
+proc geom() {
+  soma {  L = 10  diam = 10  }
+  // SR is first 500um of apical dendrite
+  radTprox {  L = 100  diam = 4  }	// L = 100  diam = 4
+  radTmed {  L = 100  diam = 3  }	// L = 100  diam = 3
+  radTdist {  L = 200  diam = 2  }	// L = 200  diam = 2
+  obl1_1 {  L = 100  diam = 4  }
+  obl1_2 {  L = 100  diam = 4  }
+  obl2_2 {  L = 100  diam = 2  }
+  obl2_2 {  L = 100  diam = 2  }
+  // LM is final 300um of apical dendrite
+  lm_thick2 {  L = 100  diam = 2  }	// L = 100  diam = 2
+  lm_medium2 {  L = 100  diam = 1.5  }
+  lm_thin2 {  L = 50  diam = 1  }
+  lm_thick1 {  L = 100  diam = 2  }	//  L = 100  diam = 2
+  lm_medium1 {  L = 100  diam = 1.5  }
+  lm_thin1 {  L = 50  diam = 1  }
+  // Basal dendrites extend 300 um
+  oriprox1 {  L = 100  diam = 2  }
+  oridist1 {  L = 200  diam = 1.5  }
+  oriprox2 {  L = 100  diam = 2  }
+  oridist2 {  L = 200  diam = 1.5  }
+  // Short section of axon
+  axon {  L = 150  diam = 1  }
+}
+
+external lambda_f
+proc geom_nseg() {
+  forsec all { nseg = int((L/(0.1*lambda_f(100))+.9)/2)*2 + 1  }
+}
+
+proc biophys() {
+	forsec all {
+//		Rm = 28000	// Ohm.cm^2 (Migliore value)
+		Rm = 20000	// Ohm.cm^2 (Migliore value)
+	
+//		gka_soma = 0.0075
+//		gka_soma = 0.005
+		gka_soma = 0.0025
+		gh_soma = 0.00005
+	}
+
+  	soma {  
+ 		insert hha2    	// HH mechanism with low threshold for Na spikes (-57 mV)
+       		gnabar_hha2 = 0.007
+       		gkbar_hha2  = 0.007/5
+       		gl_hha2     = 0
+       		el_hha2     = -70
+        	
+        	insert pas    			// leak conductance
+        	g_pas =  1/Rm
+
+        	insert hd2     			// h current according to Migliore et al. 2004 
+//  		ghdbar_hd = 0
+  		ghdbar_hd = gh_soma
+  		vhalfl_hd = -73
+  
+  //		insert hNa			// h current according to Poirazi 2003
+  //    	gbar_h  = 0.000043		// anything above 0.000043 gives hyperpolarizing oscillations
+  //    	gbar_h  = 1.872e-5		
+  //    	K_h     = 8.8
+  //    	vhalf_h = -82
+  
+        	insert kap  			// proximal A current
+//        	gkabar_kap = 0.00075
+        	gkabar_kap = gka_soma		//0.0075
+  
+        	insert km  			// m-type potassium current
+        	gbar_km    = 0.06
+             
+        	insert cal 			// HVA Ca++-L type current
+        	//gcalbar_cal = 0.014/2
+        	gcalbar_cal = 0.0014/2
+        	     	
+        	insert cat 			// LVA Ca++-T type current
+        	gcatbar_cat = 0.0001/2
+  
+              	insert somacar 			// HVAm Ca++-R type current
+//             	gcabar_somacar = 0.003
+              	gcabar_somacar = 0.0003
+              	
+              	insert kca   			// K(Ca) sAHP potassium type current
+             	gbar_kca = 5*0.0001
+//              	gbar_kca = 0
+       		
+       		insert cagk2  			// medium AHP K++ current 
+       		gkbar_cagk2 = 0.09075
+//       		gkbar_cagk2 = 0
+           	       	
+              	insert cad  			// calcium pump/buffering mechanism
+  	}
+  	
+  	radTprox {
+          	insert hd2     			// h current according to Migliore et al. 2004 
+		ghdbar_hd = 2*gh_soma			//0.000005
+//		ghdbar_hd = 7*gh_soma			//0.000005						
+		vhalfl_hd = -81
+
+//		insert hNa			// h current according to Poirazi 2003
+//          	gbar_h  = 0.000043		// anything above 0.000043 gives hyperpolarizing oscillations
+//         	gbar_h  = 1.872e-5		
+//            	K_h     = 8.8
+//            	vhalf_h = -82
+
+		insert car
+		gcabar_car = 0.1*0.0003
+		
+		insert calH
+		gcalbar_calH = 0.1*0.00031635	// varies from .1*0.00031635 to 4.6*0.00031635 as distance increases
+//		gcalbar_calH = 4.6*0.00031635	// varies from .1*0.00031635 to 4.6*0.00031635 as distance increases
+		
+		insert cat
+		gcatbar_cat = 0.0001
+ 
+		insert cad			// calcium pump/buffering mechanism
+		insert kca			// slow AHP K+ current
+		gbar_kca = 5*0.0001		// varies depending on distance from 0.5*0.0001 to 5*0.0001
+//		gbar_kca = 0		// varies depending on distance from 0.5*0.0001 to 5*0.0001
+       		
+       		insert cagk2  			// medium AHP K++ current 
+     		gkbar_cagk2 = 2*0.0165
+//	       	gkbar_cagk2 = 0
+		
+		insert km			// m-type K current
+		gbar_km = 0.06			// varies with distance (see Poirazzi et al. 2003 cell-setup.hoc file)
+
+          	insert kap               	// Inserting A-current
+   		gkabar_kap = 2*gka_soma		//0.0075
+//   		gkabar_kap = 0.00075			//0.0075
+   		
+   		insert kad
+//    		gkabar_kad = 0.00075
+   		gkabar_kad = 6*gka_soma
+   		   
+          	insert hha_old 			// HH mechanism with high threshold for Na spikes (-50 mV)
+                gnabar_hha_old = 0.007
+                gkbar_hha_old  = 0.007/8.065
+                el_hha_old     = -70
+                    
+          	insert pas 			// leak conductance
+  	}
+  
+    	obl1_1 {
+            	insert hd2     			// h current according to Migliore et al. 2004 
+  		ghdbar_hd = 2*gh_soma			//0.000005						
+  		vhalfl_hd = -81
+  
+  //		insert hNa			// h current according to Poirazi 2003
+  //          	gbar_h  = 0.000043		// anything above 0.000043 gives hyperpolarizing oscillations
+  //         	gbar_h  = 1.872e-5		
+  //            K_h     = 8.8
+  //            vhalf_h = -82
+  
+  		insert car
+  		gcabar_car = 0.1*0.0003
+  		
+   		insert calH
+  		gcalbar_calH = 0.1*0.00031635	// varies from .1*0.00031635 to 4.6*0.00031635 as distance increases
+  		
+  		insert cat
+  		gcatbar_cat = 0.0001
+   
+  		insert cad			// calcium pump/buffering mechanism
+  		insert kca			// slow AHP K+ current
+  		gbar_kca = 5*0.0001		// varies depending on distance from 0.5*0.0001 to 5*0.0001
+//  		gbar_kca = 0		// varies depending on distance from 0.5*0.0001 to 5*0.0001
+         		
+         	insert cagk2  			// medium AHP K++ current 
+         	gkbar_cagk2 = 2*0.0165
+//         	gkbar_cagk2 = 0
+  		
+  		insert km			// m-type K current
+  		gbar_km = 0.06			// varies with distance (see Poirazzi et al. 2003 cell-setup.hoc file)
+  
+            	insert kap               	// Inserting A-current
+     		gkabar_kap = 2*gka_soma		//0.0075
+//     		gkabar_kap = 0.00075
+     		
+     		insert kad
+//    		gkabar_kad = 0.00075
+   		gkabar_kad = 2*gka_soma
+     		   
+            	insert hha_old 			// HH mechanism with high threshold for Na spikes (-50 mV)
+                  gnabar_hha_old = 0.007
+                  gkbar_hha_old  = 0.007/8.065
+                  el_hha_old     = -70
+                      
+            	insert pas 			// leak conductance
+  	}
+ 
+   	obl1_2 {
+           	insert hd2     			// h current according to Migliore et al. 2004 
+ 		ghdbar_hd = 2*gh_soma			//0.000005						
+ 		vhalfl_hd = -81
+ 
+ //		insert hNa			// h current according to Poirazi 2003
+ //          	gbar_h  = 0.000043		// anything above 0.000043 gives hyperpolarizing oscillations
+ //         	gbar_h  = 1.872e-5		
+ //            	K_h     = 8.8
+ //            	vhalf_h = -82
+ 
+ 		insert car
+ 		gcabar_car = 0.1*0.0003
+ 		
+ 		insert calH
+// 		gcalbar_calH = 0.1*0.00031635	// varies from .1*0.00031635 to 4.6*0.00031635 as distance increases
+		gcalbar_calH = 10*0.00031635	// varies from .1*0.00031635 to 4.6*0.00031635 as distance increases
+ 		
+ 		insert cat
+ 		gcatbar_cat = 0.0001
+  
+ 		insert cad			// calcium pump/buffering mechanism
+ 		insert kca			// slow AHP K+ current
+ 		gbar_kca = 5*0.0001		// varies depending on distance from 0.5*0.0001 to 5*0.0001
+// 		gbar_kca = 0		// varies depending on distance from 0.5*0.0001 to 5*0.0001
+        		
+        	insert cagk2  			// medium AHP K++ current 
+        	gkbar_cagk2 = 2*0.0165
+//        	gkbar_cagk2 = 0
+ 		
+ 		insert km			// m-type K current
+ 		gbar_km = 0.06			// varies with distance (see Poirazzi et al. 2003 cell-setup.hoc file)
+ 
+           	insert kap               	// Inserting A-current
+    		gkabar_kap = 2*gka_soma		//0.0075
+//    		gkabar_kap = 0.00075
+    		
+    		insert kad
+//    		gkabar_kad = 0.00075
+   		gkabar_kad = 2*gka_soma
+    		   
+           	insert hha_old 			// HH mechanism with high threshold for Na spikes (-50 mV)
+                 gnabar_hha_old = 0.007
+                 gkbar_hha_old  = 0.007/8.065
+                 el_hha_old     = -70
+                     
+           	insert pas 			// leak conductance
+  	}
+  	
+  	radTmed {
+            	insert hd2     			// h current according to Migliore et al. 2004 
+		ghdbar_hd = 4*gh_soma			// 0.000005
+//		ghdbar_hd = 7*gh_soma			// 0.000005					
+		vhalfl_hd = -81
+
+//		insert hNa			// h current according to Poirazi 2003
+//          	gbar_h  = 0.000043		
+//         	gbar_h  = 1.872e-5		
+//            	K_h     = 8.8
+//            	vhalf_h = -82
+
+		insert car			// HVAm Ca++-R type current
+		gcabar_car = 0.1*0.0003
+		
+		insert calH			// HVA L-type Ca2+ channel used in distal dendrites to account for 
+						// distally restricted initiation of Ca2+ spikes
+//		gcalbar_calH = 4.6*0.00031635	// varies from .1*0.00031635 to 4.6*0.00031635 as distance increases
+		gcalbar_calH = 10*0.00031635	// varies from .1*0.00031635 to 4.6*0.00031635 as distance increases
+		
+		insert cat			// HVA T-type Ca2+ channel 
+		gcatbar_cat = 0.0001		// 0.0001
+ 
+		insert cad			// calcium pump/buffering mechanism
+		
+		insert kca			// slow AHP K+ current
+		gbar_kca = 5*0.0001		// varies depending on distance from 0.5*0.0001 to 5*0.0001
+//		gbar_kca = 0		// varies depending on distance from 0.5*0.0001 to 5*0.0001
+       		
+       		insert cagk2  			// medium AHP K++ current 
+       		gkbar_cagk2 = 2*0.0165
+//       		gkbar_cagk2 = 0
+
+		insert km			// m-type K current
+		gbar_km = 0.06			// varies with distance (see Poirazzi et al. 2003 cell-setup.hoc file)
+
+          	insert kap               	// Inserting A-current
+   		gkabar_kap = 0
+   		
+   		insert kad
+   		gkabar_kad = 4*gka_soma
+//   		gkabar_kad = 0.00075
+   		   
+          	insert hha_old 			// HH mechanism with high threshold for Na spikes (-50 mV)
+                gnabar_hha_old = 0.007
+                gkbar_hha_old  = 0.007/8.065
+                el_hha_old     = -70
+                    
+          	insert pas 			// leak conductance
+  	}
+  	
+  	radTdist {
+            	insert hd2     			// h current according to Migliore et al. 2004 
+		ghdbar_hd = 7*gh_soma			// 0.000005					
+		vhalfl_hd = -81
+
+//		insert hNa			// h current according to Poirazi 2003
+//          	gbar_h  = 0.000043		
+//         	gbar_h  = 1.872e-5		
+//            	K_h     = 8.8
+//            	vhalf_h = -82
+
+		insert car
+		gcabar_car = 0.1*0.0003
+		
+		insert calH
+//		gcalbar_calH = 4.6*0.00031635	// varies from .1*0.00031635 to 4.6*0.00031635 as distance increases
+		gcalbar_calH = 10*0.00031635	// varies from .1*0.00031635 to 4.6*0.00031635 as distance increases
+		
+		insert cat
+		gcatbar_cat = 0.0001
+ 
+		insert cad			// calcium pump/buffering mechanism
+		insert kca			// slow AHP K+ current
+		gbar_kca = 0.5*0.0001		// varies depending on distance from 0.5*0.0001 to 5*0.0001
+//		gbar_kca = 0		// varies depending on distance from 0.5*0.0001 to 5*0.0001
+       		
+       		insert cagk2  			// medium AHP K++ current 
+       		gkbar_cagk2 = 0
+
+		insert km			// m-type K current
+		gbar_km = 0.06			// varies with distance (see Poirazzi et al. 2003 cell-setup.hoc file)
+
+          	insert kap               	// Inserting A-current
+   		gkabar_kap = 0	
+ 		
+ 		insert kad
+     		gkabar_kad = 6*gka_soma
+//     		gkabar_kad = 0.00075
+   		  
+          	insert hha_old 			// HH mechanism with high threshold for Na spikes (-50 mV)
+                gnabar_hha_old = 0.007
+                gkbar_hha_old  = 0.007/8.065
+                el_hha_old     = -70
+                    
+          	insert pas 			// leak conductance
+  	}
+  
+    	obl2_1 {
+              	insert hd2     			// h current according to Migliore et al. 2004 
+  		ghdbar_hd = 7*gh_soma			// 0.000005					
+  		vhalfl_hd = -81
+  
+  //		insert hNa			// h current according to Poirazi 2003
+  //          	gbar_h  = 0.000043		
+  //         	gbar_h  = 1.872e-5		
+  //            K_h     = 8.8
+  //            vhalf_h = -82
+  
+  		insert car
+  		gcabar_car = 0.1*0.0003
+  		
+  		insert calH
+//  		gcalbar_calH = 4.6*0.00031635	// varies from .1*0.00031635 to 4.6*0.00031635 as distance increases
+  		gcalbar_calH = 10*0.00031635	// varies from .1*0.00031635 to 4.6*0.00031635 as distance increases
+  		
+  		insert cat
+  		gcatbar_cat = 0.0001
+   
+  		insert cad			// calcium pump/buffering mechanism
+  		insert kca			// slow AHP K+ current
+  		gbar_kca = 0.5*0.0001		// varies depending on distance from 0.5*0.0001 to 5*0.0001
+//  		gbar_kca = 0		// varies depending on distance from 0.5*0.0001 to 5*0.0001
+         		
+         	insert cagk2  			// medium AHP K++ current 
+         	gkbar_cagk2 = 0.25*0.0165
+//         	gkbar_cagk2 = 0
+  
+  		insert km			// m-type K current
+  		gbar_km = 0.06			// varies with distance (see Poirazzi et al. 2003 cell-setup.hoc file)
+  
+            	insert kap               	// Inserting A-current
+     		gkabar_kap = 0	
+   		
+   		insert kad
+     		gkabar_kad = 6*gka_soma
+//     		gkabar_kad = 0.00075
+     		  
+            	insert hha_old 			// HH mechanism with high threshold for Na spikes (-50 mV)
+                  gnabar_hha_old = 0.007
+                  gkbar_hha_old  = 0.007/8.065
+                  el_hha_old     = -70
+                      
+            	insert pas 			// leak conductance
+  	}
+  
+    	obl2_2 {
+              	insert hd2     			// h current according to Migliore et al. 2004 
+  		ghdbar_hd = 7*gh_soma			// 0.000005					
+  		vhalfl_hd = -81
+  
+  //		insert hNa			// h current according to Poirazi 2003
+  //          	gbar_h  = 0.000043		
+  //         	gbar_h  = 1.872e-5		
+  //            K_h     = 8.8
+  //            vhalf_h = -82
+  
+  		insert car
+  		gcabar_car = 0.1*0.0003
+  		
+  		insert calH
+//  		gcalbar_calH = 4.6*0.00031635	// varies from .1*0.00031635 to 4.6*0.00031635 as distance increases
+  		gcalbar_calH = 10*0.00031635	// varies from .1*0.00031635 to 4.6*0.00031635 as distance increases
+  		
+  		insert cat
+  		gcatbar_cat = 0.0001
+   
+  		insert cad			// calcium pump/buffering mechanism
+  		insert kca			// slow AHP K+ current
+  		gbar_kca = 0.5*0.0001		// varies depending on distance from 0.5*0.0001 to 5*0.0001
+//  		gbar_kca = 0		// varies depending on distance from 0.5*0.0001 to 5*0.0001
+         		
+         	insert cagk2  			// medium AHP K++ current 
+         	gkbar_cagk2 = 0.25*0.0165
+//         	gkbar_cagk2 = 0
+  
+  		insert km			// m-type K current
+  		gbar_km = 0.06			// varies with distance (see Poirazzi et al. 2003 cell-setup.hoc file)
+  
+            	insert kap               	// Inserting A-current
+     		gkabar_kap = 0	
+   		
+   		insert kad
+     		gkabar_kad = 6*gka_soma
+//     		gkabar_kad = 0.00075
+     		  
+            	insert hha_old 			// HH mechanism with high threshold for Na spikes (-50 mV)
+                  gnabar_hha_old = 0.007
+                  gkbar_hha_old  = 0.007/8.065
+                  el_hha_old     = -70
+                      
+            	insert pas 			// leak conductance
+  	}
+  	
+  
+  	lm_thick2 {
+            	insert hha_old 			// HH mechanism with high threshold for Na spikes (-50 mV)
+                gnabar_hha_old = 0.007
+                gkbar_hha_old  = 0.007/8.065
+                el_hha_old     = -70
+            	gl_hha_old     = 0
+  
+            	insert pas 			// passive properties
+                g_pas          = 1/200000
+
+            	insert kad 			// Insert basal A current
+                gkabar_kad = 6.5*gka_soma
+//                gkabar_kad = 0.00075
+  	}
+  	
+  	lm_medium2 {
+            	insert hha_old 			// HH mechanism with high threshold for Na spikes (-50 mV)
+                gnabar_hha_old = 0.007
+                gkbar_hha_old  = 0.007/8.065
+                el_hha_old     = -70
+            	gl_hha_old     = 0
+  
+            	insert pas 			// passive properties
+                g_pas          = 1/200000
+
+            	insert kad 			// Insert basal A current
+                gkabar_kad = 6.5*gka_soma
+//                gkabar_kad = 0.00075
+  	}
+  
+  	lm_thin2 {
+            	insert hha_old 			// HH mechanism with high threshold for Na spikes (-50 mV)
+                gnabar_hha_old = 0.007
+                gkbar_hha_old  = 0.007/8.065
+                el_hha_old     = -70
+            	gl_hha_old     = 0
+  
+            	insert pas 			// passive properties
+                g_pas          = 1/200000
+
+            	insert kad 			// Insert basal A current
+                gkabar_kad = 6.5*gka_soma
+//                gkabar_kad = 0.00075
+  	}
+  
+  	lm_thick1 {
+            	insert hha_old 			// HH mechanism with high threshold for Na spikes (-50 mV)
+                gnabar_hha_old = 0.007
+                gkbar_hha_old  = 0.007/8.065
+                el_hha_old     = -70
+            	gl_hha_old     = 0
+  
+            	insert pas 			// passive properties
+                g_pas          = 1/200000
+
+            	insert kad 			// Insert basal A current
+                gkabar_kad = 6.5*gka_soma
+//                gkabar_kad = 0.00075
+  	}
+  
+  	lm_medium1 {
+            	insert hha_old 			// HH mechanism with high threshold for Na spikes (-50 mV)
+                gnabar_hha_old = 0.007
+                gkbar_hha_old  = 0.007/8.065
+                el_hha_old     = -70
+            	gl_hha_old     = 0
+  
+            	insert pas 			// passive properties
+                g_pas          = 1/200000
+
+            	insert kad 			// Insert basal A current
+                gkabar_kad = 6.5*gka_soma
+//                gkabar_kad = 0.00075
+  	}
+  
+  	lm_thin1 {
+            	insert hha_old 			// HH mechanism with high threshold for Na spikes (-50 mV)
+                gnabar_hha_old = 0.007
+                gkbar_hha_old  = 0.007/8.065
+                el_hha_old     = -70
+            	gl_hha_old     = 0
+  
+            	insert pas 			// passive properties
+                g_pas          = 1/200000
+
+            	insert kad 			// Insert basal A current
+                gkabar_kad = 6.5*gka_soma
+//                gkabar_kad = 0.00075
+  	}
+  
+  	oriprox1 {
+            	insert hd2     			// h current according to Migliore et al. 2004 
+		ghdbar_hd = gh_soma
+		vhalfl_hd = -81
+
+//		insert hNa			// h current according to Poirazi 2003
+//          	gbar_h  = 0.000043		// anything above 0.000043 gives hyperpolarizing oscillations
+//         	gbar_h  = 1.872e-5		
+//            	K_h     = 8.8
+//            	vhalf_h = -82
+
+		insert car
+		gcabar_car = 0.1*0.0003
+		
+		insert calH
+		gcalbar_calH = 0.1*0.00031635	// varies from .1*0.00031635 to 4.6*0.00031635 as distance increases
+		
+		insert cat
+		gcatbar_cat = 0.0001
+ 
+		insert cad			// calcium pump/buffering mechanism
+		insert kca			// slow AHP K+ current
+		gbar_kca = 5*0.0001		// varies depending on distance from 0.5*0.0001 to 5*0.0001
+       		
+       		insert cagk2  			// medium AHP K++ current 
+       		gkbar_cagk2 = 2*0.0165
+
+		insert km			// m-type K current
+		gbar_km = 0.06			// varies with distance (see Poirazzi et al. 2003 cell-setup.hoc file)
+
+          	insert kap               	// Inserting A-current
+   		gkabar_kap = gka_soma			//0.0075
+//   		gkabar_kap = 0.00075
+   		
+   		insert kad
+   		gkabar_kad = 0
+    
+          	insert hha_old 			// HH mechanism with high threshold for Na spikes (-50 mV)
+                gnabar_hha_old = 0.007
+                gkbar_hha_old  = 0.007/8.065
+                el_hha_old     = -70
+                    
+          	insert pas 			// leak conductance
+
+  	}
+  
+  	oridist1 {
+            	insert hd2     			// h current according to Migliore et al. 2004 
+		ghdbar_hd = 2*gh_soma
+		vhalfl_hd = -81
+
+//		insert hNa			// h current according to Poirazi 2003
+//          	gbar_h  = 0.000043		// anything above 0.000043 gives hyperpolarizing oscillations
+//         	gbar_h  = 1.872e-5		
+//            	K_h     = 8.8
+//            	vhalf_h = -82
+
+		insert car
+		gcabar_car = 0.1*0.0003
+		
+		insert calH
+		gcalbar_calH = 0.1*0.00031635	// varies from 4.6*0.00031635 to 0.1*0.00031635
+		
+		insert cat
+		gcatbar_cat = 0.0001
+ 
+		insert cad			// calcium pump/buffering mechanism
+		insert kca			// slow AHP K+ current
+		gbar_kca = 5*0.0001		// varies depending on distance from 0.5*0.0001 to 5*0.0001
+       		
+       		insert cagk2  			// medium AHP K++ current 
+       		gkbar_cagk2 = 2*0.0165
+		
+		insert km			// m-type K current
+		gbar_km = 0.06			// varies with distance (see Poirazzi et al. 2003 cell-setup.hoc file)
+
+          	insert kap               	// Inserting A-current
+   		gkabar_kap = gka_soma			//0.0075
+//   		gkabar_kap = 0.00075
+   		
+   		insert kad
+   		gkabar_kad = 0
+   		   
+          	insert hha_old 			// HH mechanism with high threshold for Na spikes (-50 mV)
+                gnabar_hha_old = 0.007
+                gkbar_hha_old  = 0.007/8.065
+                el_hha_old     = -70
+                    
+          	insert pas 			// leak conductance
+
+  	}
+  
+  	oriprox2 {
+            	insert hd2     			// h current according to Migliore et al. 2004 
+		ghdbar_hd = gh_soma
+		vhalfl_hd = -81
+
+//		insert hNa			// h current according to Poirazi 2003
+//          	gbar_h  = 0.000043		// anything above 0.000043 gives hyperpolarizing oscillations
+//         	gbar_h  = 1.872e-5		
+//            	K_h     = 8.8
+//            	vhalf_h = -82
+
+		insert car
+		gcabar_car = 0.1*0.0003
+		
+		insert calH
+		gcalbar_calH = 0.1*0.00031635	// varies from .1*0.00031635 to 4.6*0.00031635 as distance increases
+		
+		insert cat
+		gcatbar_cat = 0.0001
+ 
+		insert cad			// calcium pump/buffering mechanism
+		insert kca			// slow AHP K+ current
+		gbar_kca = 5*0.0001		// varies depending on distance from 0.5*0.0001 to 5*0.0001
+       		
+       		insert cagk2  			// medium AHP K++ current
+       		gkbar_cagk2 = 2*0.0165
+
+		insert km			// m-type K current
+		gbar_km = 0.06			// varies with distance (see Poirazzi et al. 2003 cell-setup.hoc file)
+
+          	insert kap               	// Inserting A-current
+//   		gkabar_kap = 0.0075			//0.0075
+   		gkabar_kap = 0.00075
+   		
+   		insert kad
+   		gkabar_kad = 0
+   
+          	insert hha_old 			// HH mechanism with high threshold for Na spikes (-50 mV)
+                gnabar_hha_old = 0.007
+                gkbar_hha_old  = 0.007/8.065
+                el_hha_old     = -70
+                    
+          	insert pas 			// leak conductance
+       	
+  	}
+  	
+  	oridist2 {
+            	insert hd2     			// h current according to Migliore et al. 2004 
+		ghdbar_hd = 2*gh_soma
+		vhalfl_hd = -81
+
+//		insert hNa			// h current according to Poirazi 2003
+//          	gbar_h  = 0.000043		// anything above 0.000043 gives hyperpolarizing oscillations
+//         	gbar_h  = 1.872e-5		
+//            	K_h     = 8.8
+//            	vhalf_h = -82
+
+		insert car
+		gcabar_car = 0.1*0.0003
+		
+		insert calH
+		gcalbar_calH = 0.1*0.00031635	// varies from 4.6*0.00031635 to 0.1*0.00031635
+		
+		insert cat
+		gcatbar_cat = 0.0001
+ 
+		insert cad			// calcium pump/buffering mechanism
+		insert kca			// slow AHP K+ current
+		gbar_kca = 5*0.0001		// varies depending on distance from 0.5*0.0001 to 5*0.0001
+       		
+       		insert cagk2  			// medium AHP K++ current
+       		gkbar_cagk2 = 2*0.0165
+		
+		insert km			// m-type K current
+		gbar_km = 0.06			// varies with distance (see Poirazzi et al. 2003 cell-setup.hoc file)
+
+          	insert kap               	// Inserting A-current
+//   		gkabar_kap = 0.0075			//0.0075
+   		gkabar_kap = 0.00075
+   		
+   		insert kad
+   		gkabar_kad = 0
+   		   
+          	insert hha_old 			// HH mechanism with high threshold for Na spikes (-50 mV)
+                gnabar_hha_old = 0.007
+                gkbar_hha_old  = 0.007/8.065
+                el_hha_old     = -70
+                    
+          	insert pas 			// leak conductance
+  	}
+  
+  	axon {
+              	insert hha2  			// HH mechanism with low threshold for Na spikes (-57 mV)
+              	gnabar_hha2 = .1
+              	gkbar_hha2  = .1/5
+              	gl_hha2     = 0
+              	el_hha2     = -70
+     
+              	insert pas  			// leak conductance
+              	g_pas       = 1/Rm
+
+              	insert km  			// m-type potassium current
+              	gbar_km     = 0.5*0.06
+  	}
+  	
+  	forsec all {
+		ek = -80
+		ena = 50
+		e_pas = -70
+		g_pas = 1/Rm		
+		Ra = 50
+//		Ra = 100
+//		Ra = 150
+		cm = 1
+
+  	}
+}
+
+obfunc connect2target() { localobj nc //$o1 target point process, optional $o2 returned NetCon
+  soma nc = new NetCon(&v(1), $o1)
+  nc.threshold = -10
+  if (numarg() == 2) { $o2 = nc } // for backward compatibility
+  return nc
+}
+
+func is_art() { return 0 }
+
+endtemplate CA1PyramidalCell
+
