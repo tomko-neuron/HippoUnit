@@ -1,6 +1,6 @@
 {
-    "I_below_depol_block_error": 1.833333333333334, 
-    "Veq_error": 1.2359702084913342, 
-    "I_maxNumAP_error": 1.833333333333334, 
-    "I_diff_penalty": 0
+  "I_maxNumAP_error": 2.000000000000001,
+  "I_below_depol_block_error": 2.000000000000001,
+  "Veq_error": 1.2928828084727872,
+  "I_diff_penalty": 0
 }

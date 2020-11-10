@@ -1,0 +1,783 @@
+// Network cell template
+// PyramidalCell
+// Geometry: 14 sections + axon
+// Active properties: from Poirazi et al, Neuron 2003
+// Adjusted to get more decrementing BPAP
+// BPG & VCU, 2-1-09
+
+begintemplate PyramidalCell
+public is_art
+public init, topol, basic_shape, subsets, geom, biophys
+public pre_list, connect2target
+
+public soma, radTprox, radTmed, radTdist                // apical trunk
+public lm_thick1, lm_medium1, lm_thin1a, lm_thin1b      // slm 1
+public lm_thick2, lm_medium2, lm_thin2a, lm_thin2b      // slm 2
+public rad_thick1, rad_medium1, rad_thin1a, rad_thin1b  // rad 1
+public rad_thick2, rad_medium2, rad_thin2a, rad_thin2b  // rad 2
+public oriprox1, oridist1a, oridist1b, oriprox2, oridist2a, oridist2b           // basal dends
+public axon
+public all, basal, apical, axonal, somatic
+public trunk_sec_list, oblique_sec_list // HippoUnit
+
+objref pre_list, this, CellRef
+objref all, somatic, axonal, basal, apical, trunk_sec_list, oblique_sec_list
+
+proc init() {
+  topol()
+  subsets()
+  geom()
+  geom_nseg()
+  insertChannel()
+  biophys()
+  pre_list = new List()
+  //synapses()
+}
+
+create soma[1], radTprox, radTmed, radTdist                           // apical trunk
+create lm_thick1, lm_medium1, lm_thin1a, lm_thin1b                 // slm 1
+create lm_thick2, lm_medium2, lm_thin2a, lm_thin2b                 // slm 2
+create rad_thick1, rad_medium1, rad_thin1a, rad_thin1b             // rad 1
+create rad_thick2, rad_medium2, rad_thin2a, rad_thin2b             // rad 2
+create oriprox1, oridist1a, oridist1b, oriprox2, oridist2a, oridist2b    // basal dends
+create axon
+
+proc topol() { local i
+  connect radTprox(0),    soma(1)
+  connect radTmed(0),     radTprox(1)
+  connect radTdist(0),    radTmed(1)
+  connect lm_thick2(0),   radTdist(1)
+  connect lm_medium2(0),  lm_thick2(1)
+  connect lm_thin2a(0),   lm_medium2(1)
+  connect lm_thin2b(0),   lm_medium2(1)
+  connect lm_thick1(0),   radTdist(1)
+  connect lm_medium1(0),  lm_thick1(1)
+  connect lm_thin1a(0),   lm_medium1(1)
+  connect lm_thin1b(0),   lm_medium1(1)
+  connect rad_thick2(0),  radTprox(1)
+  connect rad_medium2(0), rad_thick2(1)
+  connect rad_thin2a(0),  rad_medium2(1)
+  connect rad_thin2b(0),  rad_medium2(1)
+  connect rad_thick1(0),  radTprox(1)
+  connect rad_medium1(0), rad_thick1(1)
+  connect rad_thin1a(0),  rad_medium1(1)
+  connect rad_thin1b(0),  rad_medium1(1)
+  connect oriprox1(0),    soma(0)
+  connect oridist1a(0),   oriprox1(1)
+  connect oridist1b(0),   oriprox1(1)
+  connect oriprox2(0),    soma(0)
+  connect oridist2a(0),   oriprox2(1)
+  connect oridist2b(0),   oriprox2(1)
+  connect axon(0),        soma(0)
+  basic_shape()
+}
+
+proc basic_shape() {
+  soma        { pt3dclear() pt3dadd(-7, 0, 0, 10)     pt3dadd(8, 0, 0, 10)      }
+  radTprox    { pt3dclear() pt3dadd(0, 0, 0, 4)       pt3dadd(0, 100, 0, 4)     }
+  radTmed     { pt3dclear() pt3dadd(0, 100, 0, 3)     pt3dadd(0, 200, 0, 3)     }
+  radTdist    { pt3dclear() pt3dadd(0, 200, 0, 2)     pt3dadd(0, 400, 0, 2)     }
+  rad_thick1  { pt3dclear() pt3dadd(15, 0, 0, 2)      pt3dadd(60, 45, 0, 2)     }
+  rad_medium1 { pt3dclear() pt3dadd(60, 45, 0, 1.5)   pt3dadd(90, 75, 0, 1.5)   } 
+  rad_thick2  { pt3dclear() pt3dadd(-15, 0, 0, 2)     pt3dadd(-60, 45, 0, 2)    }
+  rad_medium2 { pt3dclear() pt3dadd(-60, 45, 0, 1.5)  pt3dadd(-90, 75, 0, 1.5)  } 
+  rad_thin2a  { pt3dclear() pt3dadd(-90, 75, 0, 1)    pt3dadd(-110, 155, 0, 1)  }
+  rad_thin2b  { pt3dclear() pt3dadd(-90, 75, 0, 1)    pt3dadd(-160, 105, 0, 1)  }
+  rad_thin1a  { pt3dclear() pt3dadd(90, 75, 0, 1)     pt3dadd(110, 155, 0, 1)   }
+  rad_thin1b  { pt3dclear() pt3dadd(90, 75, 0, 1)     pt3dadd(160, 105, 0, 1)   }
+  lm_thick1   { pt3dclear() pt3dadd(0, 200, 0, 2)     pt3dadd(25, 240, 0, 2)    }
+  lm_medium1  { pt3dclear() pt3dadd(25, 240, 0, 1.5)  pt3dadd(50, 275, 0, 1.5)  }  
+  lm_thin1a   { pt3dclear() pt3dadd(50, 275, 0, 1)    pt3dadd(70, 345, 0, 1)    }
+  lm_thin1b   { pt3dclear() pt3dadd(50, 275, 0, 1)    pt3dadd(110, 315, 0, 1)   }
+  lm_thick2   { pt3dclear() pt3dadd(0, 200, 0, 2)     pt3dadd(-25, 240, 0, 2)   }
+  lm_medium2  { pt3dclear() pt3dadd(-25, 240, 0, 1.5) pt3dadd(-50, 275, 0, 1.5) }
+  lm_thin2a   { pt3dclear() pt3dadd(-50, 275, 0, 1)   pt3dadd(-70, 345, 0, 1)   }
+  lm_thin2b   { pt3dclear() pt3dadd(-50, 275, 0, 1)   pt3dadd(-110, 315, 0, 1)  }
+  oriprox1    { pt3dclear() pt3dadd(-7, 0, 0, 2)     pt3dadd(45, -29, 0, 2)    }
+  oridist1a   { pt3dclear() pt3dadd(45, -29, 0, 1.5)  pt3dadd(75, -90, 0, 1.5)  }
+  oridist1b   { pt3dclear() pt3dadd(45, -29, 0, 1.5)  pt3dadd(90, -20, 0, 1.5)  }
+  oriprox2    { pt3dclear() pt3dadd(-7, 0, 0, 2)     pt3dadd(-45, -29, 0, 2)   }
+  oridist2a   { pt3dclear() pt3dadd(-45, -29, 0, 1.5) pt3dadd(-75, -90, 0, 1.5) }
+  oridist2b   { pt3dclear() pt3dadd(-45, -29, 0, 1.5) pt3dadd(-90, -20, 0, 1.5) }
+  axon        { pt3dclear() pt3dadd(15, 0, 0, 1)      pt3dadd(15, -149, 0, 1)   }
+}
+
+proc subsets() { local i
+  objref all
+  all = new SectionList()
+  
+  soma        all.append()
+  radTprox    all.append()
+  radTmed     all.append()
+  radTdist    all.append()
+  lm_thick1   all.append()
+  lm_medium1  all.append()
+  lm_thin1a   all.append()
+  lm_thin1b   all.append()
+  lm_thick2   all.append()
+  lm_medium2  all.append()
+  lm_thin2a   all.append()
+  lm_thin2b   all.append()
+  rad_thick1  all.append()
+  rad_medium1 all.append()
+  rad_thin1a  all.append()
+  rad_thin1b  all.append()
+  rad_thick2  all.append()
+  rad_medium2 all.append()
+  rad_thin2a  all.append()
+  rad_thin2b  all.append()  
+  oriprox1    all.append()
+  oridist1a   all.append()
+  oridist1b   all.append()
+  oriprox2    all.append()
+  oridist2a   all.append()
+  oridist2b   all.append()
+  axon        all.append()
+
+  axonal = new SectionList()
+  axon axonal.append()
+
+  somatic = new SectionList()
+  soma somatic.append()
+
+  apical = new SectionList()
+  radTprox    apical.append()
+  radTmed     apical.append()
+  radTdist    apical.append()
+  lm_thick1   apical.append()
+  lm_medium1  apical.append()
+  lm_thin1a   apical.append()
+  lm_thin1b   apical.append()
+  lm_thick2   apical.append()
+  lm_medium2  apical.append()
+  lm_thin2a   apical.append()
+  lm_thin2b   apical.append()
+  rad_thick1  apical.append()
+  rad_medium1 apical.append()
+  rad_thin1a  apical.append()
+  rad_thin1b  apical.append()
+  rad_thick2  apical.append()
+  rad_medium2 apical.append()
+  rad_thin2a  apical.append()
+  rad_thin2b  apical.append()
+
+  basal = new SectionList()
+  oriprox1    basal.append()
+  oridist1a   basal.append()
+  oridist1b   basal.append()
+  oriprox2    basal.append()
+  oridist2a   basal.append()
+  oridist2b   basal.append()
+
+  trunk_sec_list = new SectionList()
+  radTprox    trunk_sec_list.append()
+  radTmed     trunk_sec_list.append()
+  radTdist    trunk_sec_list.append()
+
+  oblique_sec_list = new SectionList()
+  rad_thick1  oblique_sec_list.append()
+  rad_medium1 oblique_sec_list.append()
+  rad_thin1a  oblique_sec_list.append()
+  rad_thin1b  oblique_sec_list.append()
+  //rad_thick2  oblique_sec_list.append()
+  //rad_medium2 oblique_sec_list.append()
+  //rad_thin2a  oblique_sec_list.append()
+  //rad_thin2b  oblique_sec_list.append()
+}
+
+proc geom() {
+  soma {  L = 10  diam = 10  }
+  // SR is first 500um of apical dendrite
+  radTprox {  L = 100  diam = 4.0  }
+  radTmed  {  L = 100  diam = 3.0  }
+  radTdist {  L = 200  diam = 2.0  }
+  // OLM is final 300um of apical dendrite
+  lm_thick1  {  L = 100  diam = 2.0  }
+  lm_medium1 {  L = 100  diam = 1.5  }
+  lm_thin1a  {  L = 50   diam = 1.0  }
+  lm_thin1b  {  L = 50   diam = 1.0  }
+  lm_thick2  {  L = 100  diam = 2.0  }
+  lm_medium2 {  L = 100  diam = 1.5  }
+  lm_thin2a  {  L = 50   diam = 1.0  }
+  lm_thin2b  {  L = 50   diam = 1.0  }
+  // Radiatum is final 300um of apical dendrite
+  rad_thick1  {  L = 100  diam = 2.0  }
+  rad_medium1 {  L = 100  diam = 1.5  }
+  rad_thin1a  {  L = 50   diam = 1.0  }
+  rad_thin1b  {  L = 50   diam = 1.0  }
+  rad_thick2  {  L = 100  diam = 2.0  }
+  rad_medium2 {  L = 100  diam = 1.5  }
+  rad_thin2a  {  L = 50   diam = 1.0  }
+  rad_thin2b  {  L = 50   diam = 1.0  }  
+  // Basal dendrites extend 300 um
+  oriprox1  {  L = 100  diam = 2.0  }
+  oridist1a {  L = 100  diam = 1.5  }
+  oridist1b {  L = 100  diam = 1.5  }
+  oriprox2  {  L = 100  diam = 2.0  }
+  oridist2a {  L = 100  diam = 1.5  }
+  oridist2b {  L = 100  diam = 1.5  }
+  // Short section of axon
+  axon {  L = 150  diam = 1.0  }
+}
+
+external lambda_f
+proc geom_nseg() {
+  forsec all { nseg = int((L/(0.1*lambda_f(100))+.9)/2)*2 + 1  }
+}
+
+proc distribute_distance(){local x localobj sl
+  strdef stmp, distfunc, mech
+
+  sl = $o1
+  mech = $s2
+  distfunc = $s3
+  soma distance(0, 0.5)
+  sprint(distfunc, "%%s %s(%%f) = %s", mech, distfunc)
+  forsec sl for(x, 0) {
+    sprint(stmp, distfunc, secname(), x, distance(x))
+    execute(stmp)
+  }
+}
+
+proc insertChannel() {
+    forsec all {
+        insert pas
+        insert kdr
+        insert nax
+    }
+
+    forsec somatic {
+        insert kmb
+        insert kap
+        insert hd
+        insert can
+        insert cal
+        insert cat
+        insert kca
+        insert cagk
+        insert cacum
+    }
+
+    forsec apical {
+        insert kad
+        insert hd
+        insert can
+        insert cal
+        insert cat
+        insert kca
+        insert cagk
+        insert cacum
+    }
+
+    forsec basal {
+        insert kad
+        insert hd
+        insert can
+        insert cal
+        insert cat
+        insert kca
+        insert cagk
+        insert cacum
+    }
+
+    forsec this.axonal {
+        insert kmb
+        insert kap
+    }
+
+}
+proc biophys() {
+
+    celsius = 35 //37
+    v_init = -65 //-70
+
+    forsec all {
+    cm = 1
+    ena = 50
+    ek = -90
+    }
+
+    // opt for depolarization block
+    forsec somatic {
+        gkabar_kap = 0.0075 // 0.075979013614757188
+        gbar_kmb = 0.001 // 0.0054486096208209286
+        gkdrbar_kdr = 0.0015 //0.0043036502438625682
+        gbar_nax = 0.035 //0.0035 // 0.038280628170345957
+        gcalbar_cal =  0.0005 //8.0324964335287e-06
+        gcanbar_can = 2.2618914062501833e-06
+        gcatbar_cat =  0.00005 // 1.184948741542104e-06
+        gbar_kca = 0.0015 //9.0311387916396796e-05
+        gbar_cagk = 4.4820097108998517e-05
+        Ra = 115.3957607556371
+        g_pas = 9.031387191839301e-05
+    }
+
+    forsec axonal {
+        gbar_nax = 0.035 //0.21113423945477339
+        gkdrbar_kdr = 0.011664045469379856
+        gbar_kmb = 0.026473888790212396
+        gkabar_kap = 0.1636942175250268
+        Ra = 85.202399381150826
+        g_pas = 0.00012898002027660884
+        e_pas = -79.917091935442244
+    }
+
+    forsec apical {
+        gkdrbar_kdr = 0.0043036502438625682 //0.02
+        gbar_nax = 0.038280628170345957 //0.025
+        gcalbar_cal = 8.0324964335287e-06
+        gcanbar_can = 2.2618914062501833e-06
+        gcatbar_cat = 1.184948741542104e-06
+        gbar_kca = 9.0311387916396796e-05
+        gbar_cagk = 4.4820097108998517e-05
+        Ra = 115.3957607556371
+        g_pas = 9.031387191839301e-05
+        //gkabar_kad = 0.25
+    }
+
+    //opt for backpropagation
+    forsec trunk_sec_list {
+        gkdrbar_kdr = 0.02
+        gbar_nax = 0.025
+        gcalbar_cal = 8.0324964335287e-06
+        gcanbar_can = 2.2618914062501833e-06
+        gcatbar_cat = 1.184948741542104e-06
+        gbar_kca = 9.0311387916396796e-05
+        gbar_cagk = 4.4820097108998517e-05
+        Ra = 115.3957607556371
+        g_pas = 9.031387191839301e-05
+    }
+
+    forsec basal {
+        gkdrbar_kdr = 0.0043036502438625682
+        gbar_nax = 0.038280628170345957
+        gcalbar_cal = 8.0324964335287e-06
+        gcanbar_can = 2.2618914062501833e-06
+        gcatbar_cat = 1.184948741542104e-06
+        gbar_kca = 9.0311387916396796e-05
+        gbar_cagk = 4.4820097108998517e-05
+        Ra = 115.3957607556371
+        g_pas = 9.031387191839301e-05
+    }
+
+    distribute_distance(apical, "ghdbar_hd", "(1. + 3./100. * %.17g)*1.9042409723832741e-05")
+    distribute_distance(apical, "e_pas", "(-65.726902768520958-5*%.17g/150)")
+    distribute_distance(apical, "gkabar_kad", "(15./(1. + exp((300-%.17g)/50)))* 0.012921529390557651 ")
+    distribute_distance(basal, "ghdbar_hd", "(1. + 3./100. * %.17g)*1.9042409723832741e-05")
+    distribute_distance(basal, "e_pas", "(-65.726902768520958-5*%.17g/150)")
+    distribute_distance(basal, "gkabar_kad", "(15./(1. + exp((300-%.17g)/50)))*0.012921529390557651")
+    distribute_distance(somatic, "ghdbar_hd", "(1. + 3./100. * %.17g)*1.9042409723832741e-05")
+    distribute_distance(somatic, "e_pas", "(-65.726902768520958-5*%.17g/150)")
+
+    radTprox {gkabar_kad = 0.1}
+    radTmed {gkabar_kad = 0.15}
+    radTdist {gkabar_kad = 0.2}
+}
+
+obfunc connect2target() { localobj nc //$o1 target point process, optional $o2 returned NetCon
+  soma nc = new NetCon(&v(1), $o1)
+  nc.threshold = -10
+  if (numarg() == 2) { $o2 = nc } // for backward compatibility
+  return nc
+}
+
+objref syn_
+proc synapses_EC_AMPA() {
+  /* E0 */ lm_medium1 syn_ = new MyExp2Syn(0.5)  pre_list.append(syn_)	// AMPA		EC input
+  syn_.tau1 = 0.5
+  syn_.tau2 = 3.0
+  syn_.e    = 0
+  /* E1 */ lm_thin1a syn_ = new MyExp2Syn(0.5)  pre_list.append(syn_)  // AMPA   EC input
+  syn_.tau1 = 0.5
+  syn_.tau2 = 3.0
+  syn_.e    = 0
+  /* E2 */ lm_thin1b syn_ = new MyExp2Syn(0.5)  pre_list.append(syn_)  // AMPA   EC input
+  syn_.tau1 = 0.5
+  syn_.tau2 = 3.0
+  syn_.e    = 0
+  /* E3 */ lm_medium2 syn_ = new MyExp2Syn(0.5)  pre_list.append(syn_)  // AMPA   EC input
+  syn_.tau1 = 0.5
+  syn_.tau2 = 3.0
+  syn_.e    = 0
+  /* E4 */ lm_thin2a syn_ = new MyExp2Syn(0.5)  pre_list.append(syn_)  // AMPA   EC input
+  syn_.tau1 = 0.5
+  syn_.tau2 = 3.0
+  syn_.e    = 0
+  /* E5 */ lm_thin2b syn_ = new MyExp2Syn(0.5)  pre_list.append(syn_)  // AMPA   EC input
+  syn_.tau1 = 0.5
+  syn_.tau2 = 3.0
+  syn_.e    = 0
+}
+
+proc synapses_EC_NMDA() {
+  /* E6 */ lm_medium1 syn_ = new NMDA(0.5)  pre_list.append(syn_)   // NMDA   EC input
+  syn_.tcon = 2.3 
+  syn_.tcoff = 100
+  syn_.gNMDAmax = 1 // use connection weight to determine max cond
+  /* E7 */ lm_thin1a syn_ = new NMDA(0.5)  pre_list.append(syn_)   // NMDA   EC input
+  syn_.tcon = 2.3 
+  syn_.tcoff = 100
+  syn_.gNMDAmax = 1 // use connection weight to determine max cond      
+  /* E8 */ lm_thin1b syn_ = new NMDA(0.5)  pre_list.append(syn_)   // NMDA   EC input
+  syn_.tcon = 2.3 
+  syn_.tcoff = 100
+  syn_.gNMDAmax = 1 // use connection weight to determine max cond   
+  /* E9 */ lm_medium2 syn_ = new NMDA(0.5)  pre_list.append(syn_)   // NMDA   EC input
+  syn_.tcon = 2.3 
+  syn_.tcoff = 100
+  syn_.gNMDAmax = 1 // use connection weight to determine max cond
+  /* E10 */ lm_thin2a syn_ = new NMDA(0.5)  pre_list.append(syn_)   // NMDA   EC input
+  syn_.tcon = 2.3 
+  syn_.tcoff = 100
+  syn_.gNMDAmax = 1 // use connection weight to determine max cond   
+  /* E11 */ lm_thin2b syn_ = new NMDA(0.5)  pre_list.append(syn_)   // NMDA   EC input
+  syn_.tcon = 2.3 
+  syn_.tcoff = 100
+  syn_.gNMDAmax = 1 // use connection weight to determine max cond
+}
+
+proc synapses_CA3_AMPA_apical() {
+  /* E12 */ rad_medium1 syn_ = new MyExp2Syn(0.5)  pre_list.append(syn_)  // AMPA   CA3 input
+  syn_.tau1 = 0.5
+  syn_.tau2 = 3.0
+  syn_.e    = 0
+  /* E13 */ rad_thin1a syn_ = new MyExp2Syn(0.5)  pre_list.append(syn_)  // AMPA   CA3 input
+  syn_.tau1 = 0.5
+  syn_.tau2 = 3.0
+  syn_.e    = 0
+  /* E14 */ rad_thin1b syn_ = new MyExp2Syn(0.5)  pre_list.append(syn_)  // AMPA   CA3 input
+  syn_.tau1 = 0.5
+  syn_.tau2 = 3.0
+  syn_.e    = 0
+  /* E15 */ rad_medium2 syn_ = new MyExp2Syn(0.5)  pre_list.append(syn_)  // AMPA   CA3 input
+  syn_.tau1 = 0.5
+  syn_.tau2 = 3.0
+  syn_.e    = 0
+  /* E16 */ rad_thin2a syn_ = new MyExp2Syn(0.5)  pre_list.append(syn_)  // AMPA   CA3 input
+  syn_.tau1 = 0.5
+  syn_.tau2 = 3.0
+  syn_.e    = 0
+  /* E17 */ rad_thin2b syn_ = new MyExp2Syn(0.5)  pre_list.append(syn_)  // AMPA   CA3 input
+  syn_.tau1 = 0.5
+  syn_.tau2 = 3.0
+  syn_.e    = 0
+}
+
+proc synapses_CA3_NMDA_apical() {
+  /* E18 */ rad_medium1 syn_ = new NMDA(0.5)  pre_list.append(syn_)   // NMDA   CA3 Schaffer collaterals
+  syn_.tcon = 2.3 
+  syn_.tcoff = 100
+  syn_.gNMDAmax = 1 // use connection weight to determine max cond
+  /* E19 */ rad_thin1a syn_ = new NMDA(0.5)  pre_list.append(syn_)   // NMDA   CA3 Schaffer collaterals
+  syn_.tcon = 2.3 
+  syn_.tcoff = 100
+  syn_.gNMDAmax = 1 // use connection weight to determine max cond      
+  /* E20 */ rad_thin1b syn_ = new NMDA(0.5)  pre_list.append(syn_)   // NMDA   CA3 Schaffer collaterals
+  syn_.tcon = 2.3 
+  syn_.tcoff = 100
+  syn_.gNMDAmax = 1 // use connection weight to determine max cond   
+  /* E21 */ rad_medium2 syn_ = new NMDA(0.5)  pre_list.append(syn_)   // NMDA   CA3 Schaffer collaterals
+  syn_.tcon = 2.3 
+  syn_.tcoff = 100
+  syn_.gNMDAmax = 1 // use connection weight to determine max cond
+  /* E22 */ rad_thin2a syn_ = new NMDA(0.5)  pre_list.append(syn_)   // NMDA   CA3 Schaffer collaterals
+  syn_.tcon = 2.3 
+  syn_.tcoff = 100
+  syn_.gNMDAmax = 1 // use connection weight to determine max cond   
+  /* E23 */ rad_thin2b syn_ = new NMDA(0.5)  pre_list.append(syn_)   // NMDA   CA3 Schaffer collaterals
+  syn_.tcon = 2.3 
+  syn_.tcoff = 100
+  syn_.gNMDAmax = 1 // use connection weight to determine max cond
+}
+
+proc synapses_CA3_AMPA_basal() {
+  /* E24 */ oriprox1 syn_ = new MyExp2Syn(0.5)  pre_list.append(syn_)  // AMPA   CA3 input - basal
+  syn_.tau1 = 0.5
+  syn_.tau2 = 3.0
+  syn_.e    = 0
+  /* E25 */ oridist1a syn_ = new MyExp2Syn(0.5)  pre_list.append(syn_)  // AMPA   CA3 input - basal
+  syn_.tau1 = 0.5
+  syn_.tau2 = 3.0
+  syn_.e    = 0
+  /* E26 */ oridist1b syn_ = new MyExp2Syn(0.5)  pre_list.append(syn_)  // AMPA   CA3 input - basal
+  syn_.tau1 = 0.5
+  syn_.tau2 = 3.0
+  syn_.e    = 0
+  /* E27 */ oriprox2 syn_ = new MyExp2Syn(0.5)  pre_list.append(syn_)  // AMPA   CA3 input - basal
+  syn_.tau1 = 0.5
+  syn_.tau2 = 3.0
+  syn_.e    = 0
+  /* E28 */	oridist2a syn_ = new MyExp2Syn(0.5)  pre_list.append(syn_)  // AMPA   CA3 input - basal
+  syn_.tau1 = 0.5
+  syn_.tau2 = 3.0
+  syn_.e    = 0
+  /* E29 */	oridist2b syn_ = new MyExp2Syn(0.5)  pre_list.append(syn_)  // AMPA   CA3 input - basal
+  syn_.tau1 = 0.5
+  syn_.tau2 = 3.0
+  syn_.e    = 0
+}
+
+proc synapses_CA3_NMDA_basal() {
+  /* E30 */	oriprox1 syn_ = new NMDA(0.5)  pre_list.append(syn_)   // NMDA   CA3 - basal
+  syn_.tcon = 2.3 
+  syn_.tcoff = 100
+  syn_.gNMDAmax = 1 // use connection weight to determine max cond
+  /* E31 */	oridist1a syn_ = new NMDA(0.5)  pre_list.append(syn_)   // NMDA   CA3 - basal
+  syn_.tcon = 2.3 
+  syn_.tcoff = 100
+  syn_.gNMDAmax = 1 // use connection weight to determine max cond      
+  /* E32 */	oridist1b syn_ = new NMDA(0.5)  pre_list.append(syn_)   // NMDA   CA3 - basal
+  syn_.tcon = 2.3 
+  syn_.tcoff = 100
+  syn_.gNMDAmax = 1 // use connection weight to determine max cond   
+  /* E33 */	oriprox2 syn_ = new NMDA(0.5)  pre_list.append(syn_)   // NMDA   CA3 - basal
+  syn_.tcon = 2.3 
+  syn_.tcoff = 100
+  syn_.gNMDAmax = 1 // use connection weight to determine max cond
+  /* E34 */	oridist2a syn_ = new NMDA(0.5)  pre_list.append(syn_)   // NMDA   CA3 - basal
+  syn_.tcon = 2.3 
+  syn_.tcoff = 100
+  syn_.gNMDAmax = 1 // use connection weight to determine max cond   
+  /* E35 */	oridist2b syn_ = new NMDA(0.5)  pre_list.append(syn_)   // NMDA   CA3 - basal
+  syn_.tcon = 2.3 
+  syn_.tcoff = 100
+  syn_.gNMDAmax = 1 // use connection weight to determine max cond
+}
+
+proc synapses_GABA_soma_axon() {
+  /* I36 */	soma syn_ = new MyExp2Syn(0.5)  pre_list.append(syn_)		// GABA-A	B cell
+  syn_.tau1 = 0.30
+  syn_.tau2 = 6.20
+  syn_.e    = -75
+  /* I37 */	soma syn_ = new MyExp2Syn(0.5)  pre_list.append(syn_)   // GABA-A VIP/CCK cell
+  syn_.tau1 = 0.7 //0.20
+  syn_.tau2 = 7.1 //4.20
+  syn_.e    = -75
+  /* I38 */	axon syn_ = new MyExp2Syn(0.1)  pre_list.append(syn_)		// GABA-A	AA cell
+  syn_.tau1 = 0.28
+  syn_.tau2 = 8.40
+  syn_.e    = -75
+}
+
+proc synapses_GABAA_OLM() {
+  /* I39 */ lm_thick1 syn_ = new MyExp2Syn(0.5) pre_list.append(syn_)	// GABA-A	OLM cells
+  syn_.tau1 = 0.13
+  syn_.tau2 = 11.0
+  syn_.e    = -75
+  /* I40 */ lm_medium1 syn_ = new MyExp2Syn(0.5) pre_list.append(syn_)   // GABA-A OLM cells
+  syn_.tau1 = 0.13
+  syn_.tau2 = 11.0
+  syn_.e    = -75
+  /* I41 */ lm_thin1a syn_ = new MyExp2Syn(0.5) pre_list.append(syn_)   	// GABA-A OLM cells
+  syn_.tau1 = 0.13
+  syn_.tau2 = 11.0
+  syn_.e    = -75
+  /* I42 */ lm_thin1b syn_ = new MyExp2Syn(0.5) pre_list.append(syn_)   // GABA-A OLM cells
+  syn_.tau1 = 0.13
+  syn_.tau2 = 11.0
+  syn_.e    = -75
+  /* I43 */ lm_thick2 syn_ = new MyExp2Syn(0.5) pre_list.append(syn_) 	// GABA-A	OLM cells
+  syn_.tau1 = 0.13
+  syn_.tau2 = 11.0
+  syn_.e    = -75
+  /* I44 */ lm_medium2 syn_ = new MyExp2Syn(0.5) pre_list.append(syn_) 	// GABA-A OLM cells
+  syn_.tau1 = 0.13
+  syn_.tau2 = 11.0
+  syn_.e    = -75
+  /* I45 */ lm_thin2a syn_ = new MyExp2Syn(0.5) pre_list.append(syn_) 	// GABA-A OLM cells
+  syn_.tau1 = 0.13
+  syn_.tau2 = 11.0
+  syn_.e    = -75
+  /* I46 */ lm_thin2b syn_ = new MyExp2Syn(0.5) pre_list.append(syn_) 	// GABA-A OLM cells
+  syn_.tau1 = 0.13
+  syn_.tau2 = 11.0
+  syn_.e    = -75
+}
+
+proc synapses_GABAB_OLM() {
+  /* I47 */	lm_thick1 syn_ = new MyExp2Syn(0.5) pre_list.append(syn_)	// GABA-B	OLM cells
+  syn_.tau1 = 35
+  syn_.tau2 = 100
+  syn_.e    = -75
+  /* I48 */	lm_medium1 syn_ = new MyExp2Syn(0.5) pre_list.append(syn_)	// GABA-B	OLM cells
+  syn_.tau1 = 35
+  syn_.tau2 = 100
+  syn_.e    = -75
+  /* I49 */ 	lm_thin1a syn_ = new MyExp2Syn(0.5) pre_list.append(syn_)  	// GABA-B OLM cells
+  syn_.tau1 = 35
+  syn_.tau2 = 100
+  syn_.e    = -75
+  /* I50 */ 	lm_thin1b syn_ = new MyExp2Syn(0.5) pre_list.append(syn_)  	// GABA-B OLM cells
+  syn_.tau1 = 35
+  syn_.tau2 = 100
+  syn_.e    = -75
+  /* I51 */ 	lm_thick2 syn_ = new MyExp2Syn(0.5) pre_list.append(syn_)  	// GABA-B OLM cells
+  syn_.tau1 = 35
+  syn_.tau2 = 100
+  syn_.e    = -75
+  /* I52 */ 	lm_medium2 syn_ = new MyExp2Syn(0.5) pre_list.append(syn_)  	// GABA-B OLM cells
+  syn_.tau1 = 35
+  syn_.tau2 = 100
+  syn_.e    = -75
+  /* I53 */ 	lm_thin2a syn_ = new MyExp2Syn(0.5) pre_list.append(syn_)  	// GABA-B OLM cells
+  syn_.tau1 = 35
+  syn_.tau2 = 100
+  syn_.e    = -75
+  /* I54 */ 	lm_thin2b syn_ = new MyExp2Syn(0.5) pre_list.append(syn_)  	// GABA-B OLM cells
+  syn_.tau1 = 35
+  syn_.tau2 = 100
+  syn_.e    = -75
+}
+
+proc synapses_GABAA_BS() {
+  /* I55 */	rad_thick1 syn_ = new MyExp2Syn(0.5)  pre_list.append(syn_)	// GABA-A	BS cells
+  syn_.tau1 = 0.11
+  syn_.tau2 = 9.70
+  syn_.e    = -75
+  /* I56 */	rad_medium1 syn_ = new MyExp2Syn(0.5)  pre_list.append(syn_)	// GABA-A	BS cells
+  syn_.tau1 = 0.11
+  syn_.tau2 = 9.70
+  syn_.e    = -75
+  /* I57 */	rad_thin1a syn_ = new MyExp2Syn(0.5)  pre_list.append(syn_)	// GABA-A	BS cells
+  syn_.tau1 = 0.11
+  syn_.tau2 = 9.70
+  syn_.e    = -75
+  /* I58 */	rad_thin1b syn_ = new MyExp2Syn(0.5)  pre_list.append(syn_)	// GABA-A	BS cells
+  syn_.tau1 = 0.11
+  syn_.tau2 = 9.70
+  syn_.e    = -75
+  /* I59 */	rad_thick2 syn_ = new MyExp2Syn(0.5)  pre_list.append(syn_)	// GABA-A	BS cells
+  syn_.tau1 = 0.11
+  syn_.tau2 = 9.70
+  syn_.e    = -75
+  /* I60 */	rad_medium2 syn_ = new MyExp2Syn(0.5)  pre_list.append(syn_)	// GABA-A	BS cells
+  syn_.tau1 = 0.11
+  syn_.tau2 = 9.70
+  syn_.e    = -75
+  /* I61 */	rad_thin2a syn_ = new MyExp2Syn(0.5)  pre_list.append(syn_) // GABA-A BS cells
+  syn_.tau1 = 0.11
+  syn_.tau2 = 9.70
+  syn_.e    = -75  
+  /* I62 */	rad_thin2b syn_ = new MyExp2Syn(0.5)  pre_list.append(syn_)  // GABA-A BS cells
+  syn_.tau1 = 0.11
+  syn_.tau2 = 9.70
+  syn_.e    = -75
+}
+
+proc synapses_GABAB_BS() {
+  /* I63 */	rad_thick1 syn_ = new MyExp2Syn(0.5)  pre_list.append(syn_)	// GABA-B	BS cells
+  syn_.tau1 = 35
+  syn_.tau2 = 100
+  syn_.e    = -75
+  /* I64 */	rad_medium1 syn_ = new MyExp2Syn(0.5)  pre_list.append(syn_)	// GABA-B	BS cells
+  syn_.tau1 = 35
+  syn_.tau2 = 100
+  syn_.e    = -75
+  /* I65 */	rad_thin1a syn_ = new MyExp2Syn(0.5)  pre_list.append(syn_)	// GABA-B	BS cells
+  syn_.tau1 = 35
+  syn_.tau2 = 100
+  syn_.e    = -75
+  /* I66 */	rad_thin1b syn_ = new MyExp2Syn(0.5)  pre_list.append(syn_)	// GABA-B	BS cells
+  syn_.tau1 = 35
+  syn_.tau2 = 100
+  syn_.e    = -75
+  /* I67 */	rad_thick2 syn_ = new MyExp2Syn(0.5)  pre_list.append(syn_)	// GABA-B	BS cells
+  syn_.tau1 = 35
+  syn_.tau2 = 100
+  syn_.e    = -75
+  /* I68 */	rad_medium2 syn_ = new MyExp2Syn(0.5)  pre_list.append(syn_)	// GABA-B	BS cells
+  syn_.tau1 = 35
+  syn_.tau2 = 100
+  syn_.e    = -75
+  /* I69 */	rad_thin2a syn_ = new MyExp2Syn(0.5)  pre_list.append(syn_) // GABA-B BS cells
+  syn_.tau1 = 35
+  syn_.tau2 = 100
+  syn_.e    = -75
+  /* I70 */	rad_thin2b syn_ = new MyExp2Syn(0.5)  pre_list.append(syn_)  // GABA-B BS cells
+  syn_.tau1 = 35
+  syn_.tau2 = 100
+  syn_.e    = -75
+}
+
+proc synapses_GABAA_BSBasal() {
+  /* I71 */ oridist1a syn_ = new MyExp2Syn(0.5)  pre_list.append(syn_) // GABA-A BS cells
+  syn_.tau1 = 0.11
+  syn_.tau2 = 9.70
+  syn_.e    = -75
+  /* I72 */ oridist1b syn_ = new MyExp2Syn(0.5)  pre_list.append(syn_)  // GABA-A BS cells
+  syn_.tau1 = 0.11
+  syn_.tau2 = 9.70
+  syn_.e    = -75
+  /* I73 */ oridist2a syn_ = new MyExp2Syn(0.5)  pre_list.append(syn_) // GABA-A BS cells
+  syn_.tau1 = 0.11
+  syn_.tau2 = 9.70
+  syn_.e    = -75
+  /* I74 */ oridist2b syn_ = new MyExp2Syn(0.5)  pre_list.append(syn_) // GABA-A BS cells
+  syn_.tau1 = 0.11
+  syn_.tau2 = 9.70
+  syn_.e    = -75
+  /* I75 */ oriprox1 syn_ = new MyExp2Syn(0.5)  pre_list.append(syn_) // GABA-A BS cells
+  syn_.tau1 = 0.11
+  syn_.tau2 = 9.70
+  syn_.e    = -75
+  /* I76 */ oriprox2 syn_ = new MyExp2Syn(0.5)  pre_list.append(syn_)  // GABA-A BS cells
+  syn_.tau1 = 0.11
+  syn_.tau2 = 9.70
+  syn_.e    = -75
+}
+
+proc synapses_GABAB_BSBasal() {
+  /* I77 */ oridist1a syn_ = new MyExp2Syn(0.5)  pre_list.append(syn_) // GABA-B BS cells
+  syn_.tau1 = 35
+  syn_.tau2 = 100
+  syn_.e    = -75
+  /* I78 */ oridist1b syn_ = new MyExp2Syn(0.5)  pre_list.append(syn_)  // GABA-B BS cells
+  syn_.tau1 = 35
+  syn_.tau2 = 100
+  syn_.e    = -75
+  /* I79 */ oridist2a syn_ = new MyExp2Syn(0.5)  pre_list.append(syn_) // GABA-B BS cells
+  syn_.tau1 = 35
+  syn_.tau2 = 100
+  syn_.e    = -75
+  /* I80 */ oridist2b syn_ = new MyExp2Syn(0.5)  pre_list.append(syn_) // GABA-B BS cells
+  syn_.tau1 = 35
+  syn_.tau2 = 100
+  syn_.e    = -75
+  /* I81 */ oriprox1 syn_ = new MyExp2Syn(0.5)  pre_list.append(syn_) // GABA-B BS cells
+  syn_.tau1 = 35
+  syn_.tau2 = 100
+  syn_.e    = -75
+  /* I82 */ oriprox2 syn_ = new MyExp2Syn(0.5)  pre_list.append(syn_)  // GABA-B BS cells
+  syn_.tau1 = 35
+  syn_.tau2 = 100
+  syn_.e    = -75
+}
+
+proc synapses_AMPA_recurrent() {
+  /* E83 */	radTprox syn_ = new MyExp2Syn(0.5)  pre_list.append(syn_) // AMPA   PC recurrent input
+  syn_.tau1 = 0.10
+  syn_.tau2 = 1.50
+  syn_.e = 0
+}
+
+proc synapses() {
+  synapses_EC_AMPA()
+  synapses_EC_NMDA()
+  synapses_CA3_AMPA_apical()
+  synapses_CA3_NMDA_apical()
+  synapses_CA3_AMPA_basal()
+  synapses_CA3_NMDA_basal()  
+  synapses_GABA_soma_axon()
+  synapses_GABAA_OLM()
+  synapses_GABAB_OLM()
+  synapses_GABAA_BS()
+  synapses_GABAB_BS()
+  synapses_GABAA_BSBasal()
+  synapses_GABAB_BSBasal()
+  synapses_AMPA_recurrent()
+}
+
+func is_art() { return 0 }
+
+endtemplate PyramidalCell
+

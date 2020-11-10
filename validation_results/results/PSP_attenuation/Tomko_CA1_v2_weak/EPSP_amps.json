@@ -1,72 +1,72 @@
 {
-    "('CA1_PC_Tomko[0].radTdist', 0.6818181818181819)": {
-        "distance": 346.3636363636364, 
-        "EPSP_amp_dendrite": 0.7555881936199711, 
-        "EPSP_amp_soma": 0.19673122856382008
-    }, 
-    "('CA1_PC_Tomko[0].radTdist', 0.5909090909090909)": {
-        "distance": 328.1818181818182, 
-        "EPSP_amp_dendrite": 0.7398926776644004, 
-        "EPSP_amp_soma": 0.21073925928604353
-    }, 
-    "('CA1_PC_Tomko[0].radTprox', 0.8999999999999999)": {
-        "distance": 100.0, 
-        "EPSP_amp_dendrite": 0.4929153330363647, 
-        "EPSP_amp_soma": 0.42435957651689193
-    }, 
-    "('CA1_PC_Tomko[0].radTmed', 0.7)": {
-        "distance": 180.0, 
-        "EPSP_amp_dendrite": 0.5487674016389406, 
-        "EPSP_amp_soma": 0.36273842112748866
-    }, 
-    "('CA1_PC_Tomko[0].radTdist', 0.045454545454545456)": {
-        "distance": 219.0909090909091, 
-        "EPSP_amp_dendrite": 0.6025449279622137, 
-        "EPSP_amp_soma": 0.3309171982001118
-    }, 
-    "('CA1_PC_Tomko[0].radTmed', 0.5)": {
-        "distance": 160.0, 
-        "EPSP_amp_dendrite": 0.5291263631098531, 
-        "EPSP_amp_soma": 0.37673214869731453
-    }, 
-    "('CA1_PC_Tomko[0].radTmed', 0.8999999999999999)": {
-        "distance": 200.0, 
-        "EPSP_amp_dendrite": 0.5697510410929141, 
-        "EPSP_amp_soma": 0.34960611284873266
-    }, 
-    "('CA1_PC_Tomko[0].radTdist', 0.13636363636363635)": {
-        "distance": 237.27272727272725, 
-        "EPSP_amp_dendrite": 0.6424732419045398, 
-        "EPSP_amp_soma": 0.30722129976908263
-    }, 
-    "('CA1_PC_Tomko[0].radTmed', 0.1)": {
-        "distance": 120.0, 
-        "EPSP_amp_dendrite": 0.5018662031569221, 
-        "EPSP_amp_soma": 0.4100992720703118
-    }, 
-    "('CA1_PC_Tomko[0].radTmed', 0.30000000000000004)": {
-        "distance": 140.0, 
-        "EPSP_amp_dendrite": 0.5148806086170197, 
-        "EPSP_amp_soma": 0.3928963756123949
-    }, 
-    "('CA1_PC_Tomko[0].radTdist', 0.40909090909090906)": {
-        "distance": 291.8181818181818, 
-        "EPSP_amp_dendrite": 0.7117820916739532, 
-        "EPSP_amp_soma": 0.24422334805103674
-    }, 
-    "('CA1_PC_Tomko[0].radTdist', 0.5)": {
-        "distance": 310.0, 
-        "EPSP_amp_dendrite": 0.7189523834978644, 
-        "EPSP_amp_soma": 0.22571179964361932
-    }, 
-    "('CA1_PC_Tomko[0].radTdist', 0.3181818181818182)": {
-        "distance": 273.6363636363636, 
-        "EPSP_amp_dendrite": 0.6974582714442192, 
-        "EPSP_amp_soma": 0.2639403240177245
-    }, 
-    "('CA1_PC_Tomko[0].radTdist', 0.22727272727272727)": {
-        "distance": 255.45454545454544, 
-        "EPSP_amp_dendrite": 0.6745033144096624, 
-        "EPSP_amp_soma": 0.28491841463960554
-    }
+  "('CA1_PC_Tomko[0].radTprox', 0.8999999999999999)": {
+    "EPSP_amp_soma": 0.42296520627242273,
+    "EPSP_amp_dendrite": 0.4915000052803009,
+    "distance": 90.0
+  },
+  "('CA1_PC_Tomko[0].radTdist', 0.6818181818181819)": {
+    "EPSP_amp_soma": 0.1956082354222275,
+    "EPSP_amp_dendrite": 0.7556466787230391,
+    "distance": 336.3636363636364
+  },
+  "('CA1_PC_Tomko[0].radTdist', 0.5)": {
+    "EPSP_amp_soma": 0.22442355774713008,
+    "EPSP_amp_dendrite": 0.7189111698433805,
+    "distance": 300.0
+  },
+  "('CA1_PC_Tomko[0].radTmed', 0.1)": {
+    "EPSP_amp_soma": 0.40850903126579396,
+    "EPSP_amp_dendrite": 0.5002134450216715,
+    "distance": 110.0
+  },
+  "('CA1_PC_Tomko[0].radTmed', 0.8999999999999999)": {
+    "EPSP_amp_soma": 0.3476404902352215,
+    "EPSP_amp_dendrite": 0.5682454368123757,
+    "distance": 190.0
+  },
+  "('CA1_PC_Tomko[0].radTmed', 0.7)": {
+    "EPSP_amp_soma": 0.3606996366898585,
+    "EPSP_amp_dendrite": 0.546857608946155,
+    "distance": 170.0
+  },
+  "('CA1_PC_Tomko[0].radTdist', 0.3181818181818182)": {
+    "EPSP_amp_soma": 0.26243793065484056,
+    "EPSP_amp_dendrite": 0.6972438640981977,
+    "distance": 263.6363636363636
+  },
+  "('CA1_PC_Tomko[0].radTdist', 0.5909090909090909)": {
+    "EPSP_amp_soma": 0.20953614039372326,
+    "EPSP_amp_dendrite": 0.7399082919440616,
+    "distance": 318.1818181818182
+  },
+  "('CA1_PC_Tomko[0].radTdist', 0.13636363636363635)": {
+    "EPSP_amp_soma": 0.3054837634055332,
+    "EPSP_amp_dendrite": 0.6418649301510015,
+    "distance": 227.27272727272725
+  },
+  "('CA1_PC_Tomko[0].radTdist', 0.045454545454545456)": {
+    "EPSP_amp_soma": 0.3290542712206559,
+    "EPSP_amp_dendrite": 0.6015141503829255,
+    "distance": 209.0909090909091
+  },
+  "('CA1_PC_Tomko[0].radTdist', 0.40909090909090906)": {
+    "EPSP_amp_soma": 0.24283240382158056,
+    "EPSP_amp_dendrite": 0.711663078048133,
+    "distance": 281.8181818181818
+  },
+  "('CA1_PC_Tomko[0].radTdist', 0.22727272727272727)": {
+    "EPSP_amp_soma": 0.2833016690793073,
+    "EPSP_amp_dendrite": 0.674141983968056,
+    "distance": 245.45454545454544
+  },
+  "('CA1_PC_Tomko[0].radTmed', 0.5)": {
+    "EPSP_amp_soma": 0.37461673688372343,
+    "EPSP_amp_dendrite": 0.5267215996312302,
+    "distance": 150.0
+  },
+  "('CA1_PC_Tomko[0].radTmed', 0.30000000000000004)": {
+    "EPSP_amp_soma": 0.3910519825677312,
+    "EPSP_amp_dendrite": 0.5128840022819787,
+    "distance": 130.0
+  }
 }

@@ -1,0 +1,30 @@
+{
+  "50": {
+    "('PyramidalCell[0].radTprox', 0.5)": {
+      "AP1_amp": "68.25172982215985 mV",
+      "APlast_amp": "68.8295740809036 mV",
+      "actual_distance": "50.0"
+    }
+  },
+  "150": {
+    "('PyramidalCell[0].radTmed', 0.5)": {
+      "AP1_amp": "57.991625527983864 mV",
+      "APlast_amp": "58.62015876274685 mV",
+      "actual_distance": "150.0"
+    }
+  },
+  "250": {
+    "('PyramidalCell[0].radTdist', 0.21428571428571427)": {
+      "AP1_amp": "47.895493685809186 mV",
+      "APlast_amp": "48.495376664210845 mV",
+      "actual_distance": "242.85714285714286"
+    }
+  },
+  "350": {
+    "('PyramidalCell[0].radTdist', 0.7857142857142856)": {
+      "AP1_amp": "35.89247762332393 mV",
+      "APlast_amp": "36.34655051495993 mV",
+      "actual_distance": "357.1428571428571"
+    }
+  }
+}

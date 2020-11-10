@@ -1,0 +1,930 @@
+{
+  "AHP1_depth_from_peak.Step0.8": {
+    "feature mean": 79.92441691857503,
+    "feature sd": 0.0
+  },
+  "AHP1_depth_from_peak.Step1.0": {
+    "feature mean": 78.80064772775451,
+    "feature sd": 0.0
+  },
+  "AHP2_depth_from_peak.Step0.8": {
+    "feature mean": NaN,
+    "feature sd": NaN
+  },
+  "AHP2_depth_from_peak.Step1.0": {
+    "feature mean": 77.4077181961331,
+    "feature sd": 0.0
+  },
+  "AHP_depth.Step0.8": {
+    "feature mean": -1.9882989828611102,
+    "feature sd": 0.0
+  },
+  "AHP_depth.Step1.0": {
+    "feature mean": -0.9274900821511286,
+    "feature sd": 0.5491876200912438
+  },
+  "AHP_depth_abs.Step0.8": {
+    "feature mean": -68.29399223887484,
+    "feature sd": 0.0
+  },
+  "AHP_depth_abs.Step1.0": {
+    "feature mean": -67.23318333816486,
+    "feature sd": 0.5491876200912438
+  },
+  "AHP_depth_diff.Step0.8": {
+    "feature mean": NaN,
+    "feature sd": NaN
+  },
+  "AHP_depth_diff.Step1.0": {
+    "feature mean": -0.6147413688732541,
+    "feature sd": 0.4727693279646985
+  },
+  "AHP_depth_from_peak.Step0.8": {
+    "feature mean": 79.92441691857503,
+    "feature sd": 0.0
+  },
+  "AHP_depth_from_peak.Step1.0": {
+    "feature mean": 77.77065162913192,
+    "feature sd": 0.7388245709312362
+  },
+  "AHP_time_from_peak.Step0.8": {
+    "feature mean": 8.500000000001933,
+    "feature sd": 0.0
+  },
+  "AHP_time_from_peak.Step1.0": {
+    "feature mean": 7.299999999996658,
+    "feature sd": 1.003327796223182
+  },
+  "AP1_peak.Step0.8": {
+    "feature mean": 11.630424679700198,
+    "feature sd": 0.0
+  },
+  "AP1_peak.Step1.0": {
+    "feature mean": 12.339795534451142,
+    "feature sd": 0.0
+  },
+  "AP2_AP1_peak_diff.Step0.8": {
+    "feature mean": NaN,
+    "feature sd": NaN
+  },
+  "AP2_AP1_peak_diff.Step1.0": {
+    "feature mean": -2.4804402284593614,
+    "feature sd": 0.0
+  },
+  "AP2_amp.Step0.8": {
+    "feature mean": NaN,
+    "feature sd": NaN
+  },
+  "AP2_amp.Step1.0": {
+    "feature mean": 64.2659569998956,
+    "feature sd": 0.0
+  },
+  "AP2_begin_voltage.Step0.8": {
+    "feature mean": NaN,
+    "feature sd": NaN
+  },
+  "AP2_begin_voltage.Step1.0": {
+    "feature mean": -54.406601693903816,
+    "feature sd": 0.0
+  },
+  "AP2_begin_width.Step0.8": {
+    "feature mean": NaN,
+    "feature sd": NaN
+  },
+  "AP2_begin_width.Step1.0": {
+    "feature mean": 3.2999999999969987,
+    "feature sd": 0.0
+  },
+  "AP2_peak.Step0.8": {
+    "feature mean": NaN,
+    "feature sd": NaN
+  },
+  "AP2_peak.Step1.0": {
+    "feature mean": 9.85935530599178,
+    "feature sd": 0.0
+  },
+  "AP2_width.Step0.8": {
+    "feature mean": NaN,
+    "feature sd": NaN
+  },
+  "AP2_width.Step1.0": {
+    "feature mean": 1.5404339832764697,
+    "feature sd": 0.0
+  },
+  "AP_amplitude.Step0.8": {
+    "feature mean": NaN,
+    "feature sd": NaN
+  },
+  "AP_amplitude.Step1.0": {
+    "feature mean": 64.1799563707164,
+    "feature sd": 0.08600062917919615
+  },
+  "AP_amplitude_change.Step0.8": {
+    "feature mean": NaN,
+    "feature sd": NaN
+  },
+  "AP_amplitude_change.Step1.0": {
+    "feature mean": -0.18393345599812405,
+    "feature sd": 0.0010935226541892162
+  },
+  "AP_amplitude_from_voltagebase.Step0.8": {
+    "feature mean": 77.93611793571392,
+    "feature sd": 0.0
+  },
+  "AP_amplitude_from_voltagebase.Step1.0": {
+    "feature mean": 76.84316154698078,
+    "feature sd": 1.2873847407349404
+  },
+  "AP_begin_voltage.Step0.8": {
+    "feature mean": NaN,
+    "feature sd": NaN
+  },
+  "AP_begin_voltage.Step1.0": {
+    "feature mean": -54.543651701491385,
+    "feature sd": 0.1370500075875647
+  },
+  "AP_begin_width.Step0.8": {
+    "feature mean": NaN,
+    "feature sd": NaN
+  },
+  "AP_begin_width.Step1.0": {
+    "feature mean": 3.2999999999969987,
+    "feature sd": 0.0
+  },
+  "AP_duration.Step0.8": {
+    "feature mean": NaN,
+    "feature sd": NaN
+  },
+  "AP_duration.Step1.0": {
+    "feature mean": 3.5499999999967713,
+    "feature sd": 0.049999999999954525
+  },
+  "AP_duration_change.Step0.8": {
+    "feature mean": NaN,
+    "feature sd": NaN
+  },
+  "AP_duration_change.Step1.0": {
+    "feature mean": -0.33333333333409126,
+    "feature sd": 0.0
+  },
+  "AP_duration_half_width.Step0.8": {
+    "feature mean": NaN,
+    "feature sd": NaN
+  },
+  "AP_duration_half_width.Step1.0": {
+    "feature mean": 1.3999999999987267,
+    "feature sd": 0.0
+  },
+  "AP_duration_half_width_change.Step0.8": {
+    "feature mean": NaN,
+    "feature sd": NaN
+  },
+  "AP_duration_half_width_change.Step1.0": {
+    "feature mean": -0.22222222222310645,
+    "feature sd": 0.0
+  },
+  "AP_fall_rate.Step0.8": {
+    "feature mean": -22.42073002480517,
+    "feature sd": 0.0
+  },
+  "AP_fall_rate.Step1.0": {
+    "feature mean": -23.971231140324424,
+    "feature sd": 1.5991351624083159
+  },
+  "AP_fall_time.Step0.8": {
+    "feature mean": 3.100000000000705,
+    "feature sd": 0.0
+  },
+  "AP_fall_time.Step1.0": {
+    "feature mean": 2.8999999999985753,
+    "feature sd": 0.21602468994841625
+  },
+  "AP_height.Step0.8": {
+    "feature mean": 11.630424679700198,
+    "feature sd": 0.0
+  },
+  "AP_height.Step1.0": {
+    "feature mean": 10.537468290967057,
+    "feature sd": 1.2873847407349428
+  },
+  "AP_rise_rate.Step0.8": {
+    "feature mean": NaN,
+    "feature sd": NaN
+  },
+  "AP_rise_rate.Step1.0": {
+    "feature mean": 80.22494546346846,
+    "feature sd": 0.10750078647409111
+  },
+  "AP_rise_rate_change.Step0.8": {
+    "feature mean": NaN,
+    "feature sd": NaN
+  },
+  "AP_rise_rate_change.Step1.0": {
+    "feature mean": 1.2411758087086866,
+    "feature sd": 0.0
+  },
+  "AP_rise_time.Step0.8": {
+    "feature mean": NaN,
+    "feature sd": NaN
+  },
+  "AP_rise_time.Step1.0": {
+    "feature mean": 0.7999999999992724,
+    "feature sd": 0.0
+  },
+  "AP_width.Step0.8": {
+    "feature mean": NaN,
+    "feature sd": NaN
+  },
+  "AP_width.Step1.0": {
+    "feature mean": 1.2499999999988631,
+    "feature sd": 0.049999999999954525
+  },
+  "APlast_amp.Step0.8": {
+    "feature mean": 63.442435833260944,
+    "feature sd": 0.0
+  },
+  "APlast_amp.Step1.0": {
+    "feature mean": 64.0939557415372,
+    "feature sd": 0.0
+  },
+  "ISI_values.Step0.8": {
+    "feature mean": NaN,
+    "feature sd": NaN
+  },
+  "ISI_values.Step1.0": {
+    "feature mean": 179.39999999983684,
+    "feature sd": 0.0
+  },
+  "Spikecount.Step0.2": {
+    "feature mean": 0.0,
+    "feature sd": 0.0
+  },
+  "Spikecount.Step0.4": {
+    "feature mean": 1.0,
+    "feature sd": 0.0
+  },
+  "Spikecount.Step0.6": {
+    "feature mean": 1.0,
+    "feature sd": 0.0
+  },
+  "Spikecount.Step0.8": {
+    "feature mean": 1.0,
+    "feature sd": 0.0
+  },
+  "Spikecount.Step1.0": {
+    "feature mean": 3.0,
+    "feature sd": 0.0
+  },
+  "Spikecount_stimint.Step0.2": {
+    "feature mean": 0.0,
+    "feature sd": 0.0
+  },
+  "Spikecount_stimint.Step0.4": {
+    "feature mean": 1.0,
+    "feature sd": 0.0
+  },
+  "Spikecount_stimint.Step0.6": {
+    "feature mean": 1.0,
+    "feature sd": 0.0
+  },
+  "Spikecount_stimint.Step0.8": {
+    "feature mean": 1.0,
+    "feature sd": 0.0
+  },
+  "Spikecount_stimint.Step1.0": {
+    "feature mean": 3.0,
+    "feature sd": 0.0
+  },
+  "amp_drop_first_last.Step0.8": {
+    "feature mean": NaN,
+    "feature sd": NaN
+  },
+  "amp_drop_first_last.Step1.0": {
+    "feature mean": 2.926541501992892,
+    "feature sd": 0.0
+  },
+  "amp_drop_first_second.Step0.8": {
+    "feature mean": NaN,
+    "feature sd": NaN
+  },
+  "amp_drop_first_second.Step1.0": {
+    "feature mean": 2.4804402284593614,
+    "feature sd": 0.0
+  },
+  "amp_drop_second_last.Step0.8": {
+    "feature mean": NaN,
+    "feature sd": NaN
+  },
+  "amp_drop_second_last.Step1.0": {
+    "feature mean": 0.4461012735335306,
+    "feature sd": 0.0
+  },
+  "doublet_ISI.Step0.8": {
+    "feature mean": NaN,
+    "feature sd": NaN
+  },
+  "doublet_ISI.Step1.0": {
+    "feature mean": 128.4999999999078,
+    "feature sd": 0.0
+  },
+  "fast_AHP.Step0.8": {
+    "feature mean": NaN,
+    "feature sd": NaN
+  },
+  "fast_AHP.Step1.0": {
+    "feature mean": 13.141761196237503,
+    "feature sd": 0.0
+  },
+  "fast_AHP_change.Step0.8": {
+    "feature mean": NaN,
+    "feature sd": NaN
+  },
+  "inv_fifth_ISI.Step0.2": {
+    "feature mean": 0.0,
+    "feature sd": 0.0
+  },
+  "inv_fifth_ISI.Step0.4": {
+    "feature mean": 0.0,
+    "feature sd": 0.0
+  },
+  "inv_fifth_ISI.Step0.6": {
+    "feature mean": 0.0,
+    "feature sd": 0.0
+  },
+  "inv_fifth_ISI.Step0.8": {
+    "feature mean": 0.0,
+    "feature sd": 0.0
+  },
+  "inv_fifth_ISI.Step1.0": {
+    "feature mean": 0.0,
+    "feature sd": 0.0
+  },
+  "inv_first_ISI.Step0.2": {
+    "feature mean": 0.0,
+    "feature sd": 0.0
+  },
+  "inv_first_ISI.Step0.4": {
+    "feature mean": 0.0,
+    "feature sd": 0.0
+  },
+  "inv_first_ISI.Step0.6": {
+    "feature mean": 0.0,
+    "feature sd": 0.0
+  },
+  "inv_first_ISI.Step0.8": {
+    "feature mean": 0.0,
+    "feature sd": 0.0
+  },
+  "inv_first_ISI.Step1.0": {
+    "feature mean": 7.782101167320759,
+    "feature sd": 0.0
+  },
+  "inv_fourth_ISI.Step0.2": {
+    "feature mean": 0.0,
+    "feature sd": 0.0
+  },
+  "inv_fourth_ISI.Step0.4": {
+    "feature mean": 0.0,
+    "feature sd": 0.0
+  },
+  "inv_fourth_ISI.Step0.6": {
+    "feature mean": 0.0,
+    "feature sd": 0.0
+  },
+  "inv_fourth_ISI.Step0.8": {
+    "feature mean": 0.0,
+    "feature sd": 0.0
+  },
+  "inv_fourth_ISI.Step1.0": {
+    "feature mean": 0.0,
+    "feature sd": 0.0
+  },
+  "inv_last_ISI.Step0.2": {
+    "feature mean": 0.0,
+    "feature sd": 0.0
+  },
+  "inv_last_ISI.Step0.4": {
+    "feature mean": 0.0,
+    "feature sd": 0.0
+  },
+  "inv_last_ISI.Step0.6": {
+    "feature mean": 0.0,
+    "feature sd": 0.0
+  },
+  "inv_last_ISI.Step0.8": {
+    "feature mean": 0.0,
+    "feature sd": 0.0
+  },
+  "inv_last_ISI.Step1.0": {
+    "feature mean": 5.574136008923687,
+    "feature sd": 0.0
+  },
+  "inv_second_ISI.Step0.2": {
+    "feature mean": 0.0,
+    "feature sd": 0.0
+  },
+  "inv_second_ISI.Step0.4": {
+    "feature mean": 0.0,
+    "feature sd": 0.0
+  },
+  "inv_second_ISI.Step0.6": {
+    "feature mean": 0.0,
+    "feature sd": 0.0
+  },
+  "inv_second_ISI.Step0.8": {
+    "feature mean": 0.0,
+    "feature sd": 0.0
+  },
+  "inv_second_ISI.Step1.0": {
+    "feature mean": 5.574136008923687,
+    "feature sd": 0.0
+  },
+  "inv_third_ISI.Step0.2": {
+    "feature mean": 0.0,
+    "feature sd": 0.0
+  },
+  "inv_third_ISI.Step0.4": {
+    "feature mean": 0.0,
+    "feature sd": 0.0
+  },
+  "inv_third_ISI.Step0.6": {
+    "feature mean": 0.0,
+    "feature sd": 0.0
+  },
+  "inv_third_ISI.Step0.8": {
+    "feature mean": 0.0,
+    "feature sd": 0.0
+  },
+  "inv_third_ISI.Step1.0": {
+    "feature mean": 0.0,
+    "feature sd": 0.0
+  },
+  "inv_time_to_first_spike.Step0.2": {
+    "feature mean": 0.0,
+    "feature sd": 0.0
+  },
+  "inv_time_to_first_spike.Step0.4": {
+    "feature mean": 123.45679012100804,
+    "feature sd": 0.0
+  },
+  "inv_time_to_first_spike.Step0.6": {
+    "feature mean": 263.1578947257836,
+    "feature sd": 0.0
+  },
+  "inv_time_to_first_spike.Step0.8": {
+    "feature mean": 370.3703703485001,
+    "feature sd": 0.0
+  },
+  "inv_time_to_first_spike.Step1.0": {
+    "feature mean": 454.54545451253705,
+    "feature sd": 0.0
+  },
+  "irregularity_index.Step0.8": {
+    "feature mean": NaN,
+    "feature sd": NaN
+  },
+  "irregularity_index.Step1.0": {
+    "feature mean": 0.0,
+    "feature sd": 0.0
+  },
+  "max_amp_difference.Step0.8": {
+    "feature mean": NaN,
+    "feature sd": NaN
+  },
+  "max_amp_difference.Step1.0": {
+    "feature mean": 2.4804402284593614,
+    "feature sd": 0.0
+  },
+  "maximum_voltage.Step0.2": {
+    "feature mean": -60.65180017821518,
+    "feature sd": 0.0
+  },
+  "maximum_voltage.Step0.4": {
+    "feature mean": 11.183984390601154,
+    "feature sd": 0.0
+  },
+  "maximum_voltage.Step0.6": {
+    "feature mean": 10.899645970690194,
+    "feature sd": 0.0
+  },
+  "maximum_voltage.Step0.8": {
+    "feature mean": 11.630424679700198,
+    "feature sd": 0.0
+  },
+  "maximum_voltage.Step1.0": {
+    "feature mean": 12.339795534451142,
+    "feature sd": 0.0
+  },
+  "maximum_voltage_from_voltagebase.Step0.2": {
+    "feature mean": 5.653893077798543,
+    "feature sd": 0.0
+  },
+  "maximum_voltage_from_voltagebase.Step0.4": {
+    "feature mean": 77.48967764661488,
+    "feature sd": 0.0
+  },
+  "maximum_voltage_from_voltagebase.Step0.6": {
+    "feature mean": 77.20533922670393,
+    "feature sd": 0.0
+  },
+  "maximum_voltage_from_voltagebase.Step0.8": {
+    "feature mean": 77.93611793571392,
+    "feature sd": 0.0
+  },
+  "maximum_voltage_from_voltagebase.Step1.0": {
+    "feature mean": 78.64548879046487,
+    "feature sd": 0.0
+  },
+  "mean_frequency.Step0.8": {
+    "feature mean": 370.3703703485001,
+    "feature sd": 0.0
+  },
+  "mean_frequency.Step1.0": {
+    "feature mean": 9.674298613353528,
+    "feature sd": 0.0
+  },
+  "min_AHP_values.Step0.8": {
+    "feature mean": -68.29399223887484,
+    "feature sd": 0.0
+  },
+  "min_AHP_values.Step1.0": {
+    "feature mean": -67.23318333816486,
+    "feature sd": 0.5491876200912438
+  },
+  "min_voltage_between_spikes.Step0.8": {
+    "feature mean": NaN,
+    "feature sd": NaN
+  },
+  "min_voltage_between_spikes.Step1.0": {
+    "feature mean": -67.00460754172235,
+    "feature sd": 0.5437553484189763
+  },
+  "minimum_voltage.Step-0.2": {
+    "feature mean": -72.94659099994136,
+    "feature sd": 0.0
+  },
+  "minimum_voltage.Step-0.4": {
+    "feature mean": -81.17759337683681,
+    "feature sd": 0.0
+  },
+  "minimum_voltage.Step-0.6": {
+    "feature mean": -91.56055259334923,
+    "feature sd": 0.0
+  },
+  "minimum_voltage.Step-0.8": {
+    "feature mean": -103.14567399893568,
+    "feature sd": 0.0
+  },
+  "minimum_voltage.Step-1.0": {
+    "feature mean": -114.56201917514328,
+    "feature sd": 0.0
+  },
+  "number_initial_spikes.Step0.2": {
+    "feature mean": 0.0,
+    "feature sd": 0.0
+  },
+  "number_initial_spikes.Step0.4": {
+    "feature mean": 1.0,
+    "feature sd": 0.0
+  },
+  "number_initial_spikes.Step0.6": {
+    "feature mean": 1.0,
+    "feature sd": 0.0
+  },
+  "number_initial_spikes.Step0.8": {
+    "feature mean": 1.0,
+    "feature sd": 0.0
+  },
+  "number_initial_spikes.Step1.0": {
+    "feature mean": 1.0,
+    "feature sd": 0.0
+  },
+  "peak_voltage.Step0.8": {
+    "feature mean": 11.630424679700198,
+    "feature sd": 0.0
+  },
+  "peak_voltage.Step1.0": {
+    "feature mean": 10.537468290967057,
+    "feature sd": 1.2873847407349428
+  },
+  "sag_amplitude.Step-0.2": {
+    "feature mean": 2.5606989641423326,
+    "feature sd": 0.0
+  },
+  "sag_amplitude.Step-0.4": {
+    "feature mean": 5.918469888373494,
+    "feature sd": 0.0
+  },
+  "sag_amplitude.Step-0.6": {
+    "feature mean": 10.832571030925038,
+    "feature sd": 0.0
+  },
+  "sag_amplitude.Step-0.8": {
+    "feature mean": 16.121219945577167,
+    "feature sd": 0.0
+  },
+  "sag_amplitude.Step-1.0": {
+    "feature mean": 19.838811858391935,
+    "feature sd": 0.0
+  },
+  "sag_ratio1.Step-0.2": {
+    "feature mean": 0.38559530094915356,
+    "feature sd": 0.0
+  },
+  "sag_ratio1.Step-0.4": {
+    "feature mean": 0.39796326227922085,
+    "feature sd": 0.0
+  },
+  "sag_ratio1.Step-0.6": {
+    "feature mean": 0.4289301669128964,
+    "feature sd": 0.0
+  },
+  "sag_ratio1.Step-0.8": {
+    "feature mean": 0.4376012044651931,
+    "feature sd": 0.0
+  },
+  "sag_ratio1.Step-1.0": {
+    "feature mean": 0.4111131852772804,
+    "feature sd": 0.0
+  },
+  "sag_ratio2.Step-0.2": {
+    "feature mean": 0.6144046990508465,
+    "feature sd": 0.0
+  },
+  "sag_ratio2.Step-0.4": {
+    "feature mean": 0.6020367377207791,
+    "feature sd": 0.0
+  },
+  "sag_ratio2.Step-0.6": {
+    "feature mean": 0.5710698330871036,
+    "feature sd": 0.0
+  },
+  "sag_ratio2.Step-0.8": {
+    "feature mean": 0.5623987955348069,
+    "feature sd": 0.0
+  },
+  "sag_ratio2.Step-1.0": {
+    "feature mean": 0.5888868147227196,
+    "feature sd": 0.0
+  },
+  "spike_half_width.Step0.8": {
+    "feature mean": 1.6863045552180842,
+    "feature sd": 0.0
+  },
+  "spike_half_width.Step1.0": {
+    "feature mean": 1.5926797529548826,
+    "feature sd": 0.048945122547329634
+  },
+  "spike_width2.Step0.8": {
+    "feature mean": NaN,
+    "feature sd": NaN
+  },
+  "spike_width2.Step1.0": {
+    "feature mean": 1.4096203689015283,
+    "feature sd": 0.0011287707967539973
+  },
+  "steady_state_hyper.Step-0.2": {
+    "feature mean": -70.38584473080833,
+    "feature sd": 0.0
+  },
+  "steady_state_hyper.Step-0.4": {
+    "feature mean": -75.25912222287933,
+    "feature sd": 0.0
+  },
+  "steady_state_hyper.Step-0.6": {
+    "feature mean": -80.72798131438772,
+    "feature sd": 0.0
+  },
+  "steady_state_hyper.Step-0.8": {
+    "feature mean": -87.02445390638005,
+    "feature sd": 0.0
+  },
+  "steady_state_hyper.Step-1.0": {
+    "feature mean": -94.72320750496313,
+    "feature sd": 0.0
+  },
+  "steady_state_voltage.Step-0.2": {
+    "feature mean": -66.03922109217207,
+    "feature sd": 0.0
+  },
+  "steady_state_voltage.Step-0.4": {
+    "feature mean": -65.8523374774102,
+    "feature sd": 0.0
+  },
+  "steady_state_voltage.Step-0.6": {
+    "feature mean": -65.71190122852849,
+    "feature sd": 0.0
+  },
+  "steady_state_voltage.Step-0.8": {
+    "feature mean": -65.63131416355725,
+    "feature sd": 0.0
+  },
+  "steady_state_voltage.Step-1.0": {
+    "feature mean": -65.62387671260532,
+    "feature sd": 0.0
+  },
+  "steady_state_voltage.Step0.2": {
+    "feature mean": -66.86576476571341,
+    "feature sd": 0.0
+  },
+  "steady_state_voltage.Step0.4": {
+    "feature mean": -67.75371113558437,
+    "feature sd": 0.0
+  },
+  "steady_state_voltage.Step0.6": {
+    "feature mean": -69.4551558926286,
+    "feature sd": 0.0
+  },
+  "steady_state_voltage.Step0.8": {
+    "feature mean": -70.33075689968193,
+    "feature sd": 0.0
+  },
+  "steady_state_voltage.Step1.0": {
+    "feature mean": -68.86918280625653,
+    "feature sd": 0.0
+  },
+  "steady_state_voltage_stimend.Step-0.2": {
+    "feature mean": -70.38589203579903,
+    "feature sd": 0.0
+  },
+  "steady_state_voltage_stimend.Step-0.4": {
+    "feature mean": -75.25912348846332,
+    "feature sd": 0.0
+  },
+  "steady_state_voltage_stimend.Step-0.6": {
+    "feature mean": -80.72798156242419,
+    "feature sd": 0.0
+  },
+  "steady_state_voltage_stimend.Step-0.8": {
+    "feature mean": -87.02445405335851,
+    "feature sd": 0.0
+  },
+  "steady_state_voltage_stimend.Step-1.0": {
+    "feature mean": -94.72320731675134,
+    "feature sd": 0.0
+  },
+  "time_to_first_spike.Step0.8": {
+    "feature mean": 2.7000000001594344,
+    "feature sd": 0.0
+  },
+  "time_to_first_spike.Step1.0": {
+    "feature mean": 2.2000000001593207,
+    "feature sd": 0.0
+  },
+  "time_to_last_spike.Step0.8": {
+    "feature mean": 2.7000000001594344,
+    "feature sd": 0.0
+  },
+  "time_to_last_spike.Step1.0": {
+    "feature mean": 310.09999999990396,
+    "feature sd": 0.0
+  },
+  "time_to_second_spike.Step0.8": {
+    "feature mean": NaN,
+    "feature sd": NaN
+  },
+  "time_to_second_spike.Step1.0": {
+    "feature mean": 130.70000000006712,
+    "feature sd": 0.0
+  },
+  "voltage_after_stim.Step-0.2": {
+    "feature mean": -66.20590209842324,
+    "feature sd": 0.0
+  },
+  "voltage_after_stim.Step-0.4": {
+    "feature mean": -66.18076425201126,
+    "feature sd": 0.0
+  },
+  "voltage_after_stim.Step-0.6": {
+    "feature mean": -66.17152188297979,
+    "feature sd": 0.0
+  },
+  "voltage_after_stim.Step-0.8": {
+    "feature mean": -66.16887751410047,
+    "feature sd": 0.0
+  },
+  "voltage_after_stim.Step-1.0": {
+    "feature mean": -66.16707352712702,
+    "feature sd": 0.0
+  },
+  "voltage_after_stim.Step0.2": {
+    "feature mean": -66.64985923641521,
+    "feature sd": 0.0
+  },
+  "voltage_after_stim.Step0.4": {
+    "feature mean": -67.33296950595945,
+    "feature sd": 0.0
+  },
+  "voltage_after_stim.Step0.6": {
+    "feature mean": -69.85260398148104,
+    "feature sd": 0.0
+  },
+  "voltage_after_stim.Step0.8": {
+    "feature mean": -70.92584212758756,
+    "feature sd": 0.0
+  },
+  "voltage_after_stim.Step1.0": {
+    "feature mean": -68.44945395286807,
+    "feature sd": 0.0
+  },
+  "voltage_base.Step-0.2": {
+    "feature mean": -66.30569325601373,
+    "feature sd": 0.0
+  },
+  "voltage_base.Step-0.4": {
+    "feature mean": -66.30569325601373,
+    "feature sd": 0.0
+  },
+  "voltage_base.Step-0.6": {
+    "feature mean": -66.30569325601373,
+    "feature sd": 0.0
+  },
+  "voltage_base.Step-0.8": {
+    "feature mean": -66.30569325601373,
+    "feature sd": 0.0
+  },
+  "voltage_base.Step-1.0": {
+    "feature mean": -66.30569325601373,
+    "feature sd": 0.0
+  },
+  "voltage_base.Step0.2": {
+    "feature mean": -66.30569325601373,
+    "feature sd": 0.0
+  },
+  "voltage_base.Step0.4": {
+    "feature mean": -66.30569325601373,
+    "feature sd": 0.0
+  },
+  "voltage_base.Step0.6": {
+    "feature mean": -66.30569325601373,
+    "feature sd": 0.0
+  },
+  "voltage_base.Step0.8": {
+    "feature mean": -66.30569325601373,
+    "feature sd": 0.0
+  },
+  "voltage_base.Step1.0": {
+    "feature mean": -66.30569325601373,
+    "feature sd": 0.0
+  },
+  "voltage_deflection.Step-0.2": {
+    "feature mean": -4.094510498208052,
+    "feature sd": 0.0
+  },
+  "voltage_deflection.Step-0.4": {
+    "feature mean": -8.967790739487953,
+    "feature sd": 0.0
+  },
+  "voltage_deflection.Step-0.6": {
+    "feature mean": -14.436649889458394,
+    "feature sd": 0.0
+  },
+  "voltage_deflection.Step-0.8": {
+    "feature mean": -20.733122486116542,
+    "feature sd": 0.0
+  },
+  "voltage_deflection.Step-1.0": {
+    "feature mean": -28.431876099771316,
+    "feature sd": 0.0
+  },
+  "voltage_deflection_begin.Step-0.2": {
+    "feature mean": -4.5429073695240305,
+    "feature sd": 0.0
+  },
+  "voltage_deflection_begin.Step-0.4": {
+    "feature mean": -10.627592791493512,
+    "feature sd": 0.0
+  },
+  "voltage_deflection_begin.Step-0.6": {
+    "feature mean": -18.585362932989483,
+    "feature sd": 0.0
+  },
+  "voltage_deflection_begin.Step-0.8": {
+    "feature mean": -27.891716879310735,
+    "feature sd": 0.0
+  },
+  "voltage_deflection_begin.Step-1.0": {
+    "feature mean": -37.486542090975036,
+    "feature sd": 0.0
+  },
+  "voltage_deflection_vb_ssse.Step-0.2": {
+    "feature mean": -4.080198779785306,
+    "feature sd": 0.0
+  },
+  "voltage_deflection_vb_ssse.Step-0.4": {
+    "feature mean": -8.953430232449591,
+    "feature sd": 0.0
+  },
+  "voltage_deflection_vb_ssse.Step-0.6": {
+    "feature mean": -14.422288306410465,
+    "feature sd": 0.0
+  },
+  "voltage_deflection_vb_ssse.Step-0.8": {
+    "feature mean": -20.718760797344785,
+    "feature sd": 0.0
+  },
+  "voltage_deflection_vb_ssse.Step-1.0": {
+    "feature mean": -28.417514060737616,
+    "feature sd": 0.0
+  }
+}

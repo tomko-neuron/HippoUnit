@@ -1,0 +1,6 @@
+{
+  "I_maxNumAP_error": 1.5000000000000002,
+  "I_below_depol_block_error": 1.5000000000000002,
+  "Veq_error": 0.9602187724863351,
+  "I_diff_penalty": 0
+}

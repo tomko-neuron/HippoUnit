@@ -1,0 +1,27 @@
+{
+  "('PyramidalCell[0].radTmed', 0.16666666666666666)": {
+    "EPSP_amp_soma": 0.3929215034214337,
+    "EPSP_amp_dendrite": 0.462868485890354,
+    "distance": 116.66666666666666
+  },
+  "('PyramidalCell[0].radTmed', 0.5)": {
+    "EPSP_amp_soma": 0.3696560867796421,
+    "EPSP_amp_dendrite": 0.4931674742669969,
+    "distance": 150.0
+  },
+  "('PyramidalCell[0].radTmed', 0.8333333333333333)": {
+    "EPSP_amp_soma": 0.3487567012501529,
+    "EPSP_amp_dendrite": 0.5334614616166817,
+    "distance": 183.33333333333334
+  },
+  "('PyramidalCell[0].radTdist', 0.16666666666666666)": {
+    "EPSP_amp_soma": 0.29791573627390733,
+    "EPSP_amp_dendrite": 0.6535040114339807,
+    "distance": 233.33333333333331
+  },
+  "('PyramidalCell[0].radTdist', 0.5)": {
+    "EPSP_amp_soma": 0.23044821488930722,
+    "EPSP_amp_dendrite": 0.7675579166954947,
+    "distance": 300.0
+  }
+}

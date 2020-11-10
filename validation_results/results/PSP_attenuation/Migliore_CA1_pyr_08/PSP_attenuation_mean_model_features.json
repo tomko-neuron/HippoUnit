@@ -1,14 +1,14 @@
 {
-    "mean_attenuation_soma/dend_100_um": {
-        "std": 0.17669678191330282, 
-        "mean": 0.5841282818287213
-    }, 
-    "mean_attenuation_soma/dend_200_um": {
-        "std": 0.046118498607807104, 
-        "mean": 0.20551235892272146
-    }, 
-    "mean_attenuation_soma/dend_300_um": {
-        "std": 0.01635925873672269, 
-        "mean": 0.10368688914555062
-    }
+  "mean_attenuation_soma/dend_100_um": {
+    "mean": 0.5841282818287213,
+    "std": 0.1766967819133028
+  },
+  "mean_attenuation_soma/dend_200_um": {
+    "mean": 0.20551235892272146,
+    "std": 0.04611849860780711
+  },
+  "mean_attenuation_soma/dend_300_um": {
+    "mean": 0.10368688914555062,
+    "std": 0.01635925873672269
+  }
 }

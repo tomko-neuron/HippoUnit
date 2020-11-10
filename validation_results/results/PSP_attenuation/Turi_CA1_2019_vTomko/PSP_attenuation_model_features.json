@@ -1,0 +1,22 @@
+{
+  "('PyramidalCell[0].radTmed', 0.16666666666666666)": {
+    "attenuation_soma/dendrite": 0.8488836794875476,
+    "distance": 116.66666666666666
+  },
+  "('PyramidalCell[0].radTmed', 0.5)": {
+    "attenuation_soma/dendrite": 0.7495548795651379,
+    "distance": 150.0
+  },
+  "('PyramidalCell[0].radTmed', 0.8333333333333333)": {
+    "attenuation_soma/dendrite": 0.6537617547727407,
+    "distance": 183.33333333333334
+  },
+  "('PyramidalCell[0].radTdist', 0.16666666666666666)": {
+    "attenuation_soma/dendrite": 0.45587438035796024,
+    "distance": 233.33333333333331
+  },
+  "('PyramidalCell[0].radTdist', 0.5)": {
+    "attenuation_soma/dendrite": 0.300235604215298,
+    "distance": 300.0
+  }
+}

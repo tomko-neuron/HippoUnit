@@ -1,34 +1,34 @@
 {
-    "('CA1PyramidalCell[0].radTdist', 0.5)": {
-        "distance": 310.0, 
-        "attenuation_soma/dendrite": 0.5593127633581408
-    }, 
-    "('CA1PyramidalCell[0].radTmed', 0.8333333333333333)": {
-        "distance": 193.33333333333334, 
-        "attenuation_soma/dendrite": 0.8448038398511247
-    }, 
-    "('CA1PyramidalCell[0].radTdist', 0.30000000000000004)": {
-        "distance": 270.0, 
-        "attenuation_soma/dendrite": 0.6506942879207179
-    }, 
-    "('CA1PyramidalCell[0].radTmed', 0.16666666666666666)": {
-        "distance": 126.66666666666666, 
-        "attenuation_soma/dendrite": 0.9338298570632497
-    }, 
-    "('CA1PyramidalCell[0].radTdist', 0.1)": {
-        "distance": 230.0, 
-        "attenuation_soma/dendrite": 0.7610144496851583
-    }, 
-    "('CA1PyramidalCell[0].radTprox', 0.5)": {
-        "distance": 60.0, 
-        "attenuation_soma/dendrite": 0.9797359727587541
-    }, 
-    "('CA1PyramidalCell[0].radTmed', 0.5)": {
-        "distance": 160.0, 
-        "attenuation_soma/dendrite": 0.8891292737928997
-    }, 
-    "('CA1PyramidalCell[0].radTprox', 0.8333333333333333)": {
-        "distance": 93.33333333333334, 
-        "attenuation_soma/dendrite": 0.9643868915666441
-    }
+  "('CA1PyramidalCell[0].radTprox', 0.8333333333333333)": {
+    "attenuation_soma/dendrite": 0.9643868915666441,
+    "distance": 83.33333333333334
+  },
+  "('CA1PyramidalCell[0].radTmed', 0.16666666666666666)": {
+    "attenuation_soma/dendrite": 0.9338298570632497,
+    "distance": 116.66666666666666
+  },
+  "('CA1PyramidalCell[0].radTmed', 0.5)": {
+    "attenuation_soma/dendrite": 0.8891292737928997,
+    "distance": 150.0
+  },
+  "('CA1PyramidalCell[0].radTmed', 0.8333333333333333)": {
+    "attenuation_soma/dendrite": 0.8448038398511247,
+    "distance": 183.33333333333334
+  },
+  "('CA1PyramidalCell[0].radTdist', 0.1)": {
+    "attenuation_soma/dendrite": 0.7610144496851583,
+    "distance": 220.0
+  },
+  "('CA1PyramidalCell[0].radTdist', 0.30000000000000004)": {
+    "attenuation_soma/dendrite": 0.6506942879207179,
+    "distance": 260.0
+  },
+  "('CA1PyramidalCell[0].radTdist', 0.5)": {
+    "attenuation_soma/dendrite": 0.5593127633581408,
+    "distance": 300.0
+  },
+  "('CA1PyramidalCell[0].radTdist', 0.7)": {
+    "attenuation_soma/dendrite": 0.4849779704858138,
+    "distance": 340.0
+  }
 }

@@ -1,0 +1,14 @@
+{
+  "mean_attenuation_soma/dend_100_um": {
+    "mean": 0.8505867305343174,
+    "std": 0.0
+  },
+  "mean_attenuation_soma/dend_200_um": {
+    "mean": 0.6398759059224454,
+    "std": 0.12017673483618094
+  },
+  "mean_attenuation_soma/dend_300_um": {
+    "mean": 0.3033941714011739,
+    "std": 0.0
+  }
+}

@@ -1,0 +1,7 @@
+Features excluded (due to invalid values):
+AHP2_depth_from_peak.Step0.8, AHP_depth_diff.Step0.8, AP2_AP1_peak_diff.Step0.8, AP2_amp.Step0.8, AP2_begin_voltage.Step0.8, AP2_begin_width.Step0.8, AP2_peak.Step0.8, AP2_width.Step0.8, AP_amplitude.Step0.8, AP_amplitude_change.Step0.8, AP_begin_voltage.Step0.8, AP_begin_width.Step0.8, AP_duration.Step0.8, AP_duration_change.Step0.8, AP_duration_half_width.Step0.8, AP_duration_half_width_change.Step0.8, AP_rise_rate.Step0.8, AP_rise_rate_change.Step0.8, AP_rise_time.Step0.8, AP_width.Step0.8, ISI_values.Step0.8, amp_drop_first_last.Step0.8, amp_drop_first_second.Step0.8, amp_drop_second_last.Step0.8, doublet_ISI.Step0.8, fast_AHP.Step0.8, fast_AHP_change.Step0.8, irregularity_index.Step0.8, max_amp_difference.Step0.8, min_voltage_between_spikes.Step0.8, spike_width2.Step0.8, time_to_second_spike.Step0.8
+---------------------------------------------------------------------------------------------------
+Number of features succesfully evaluated: 200/232
+---------------------------------------------------------------------------------------------------
+ZScore_avg = 2.22
+---------------------------------------------------------------------------------------------------

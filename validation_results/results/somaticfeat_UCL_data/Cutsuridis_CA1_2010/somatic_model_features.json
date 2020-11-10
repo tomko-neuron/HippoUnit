@@ -1,0 +1,930 @@
+{
+  "AHP1_depth_from_peak.Step0.8": {
+    "feature mean": 53.454265995537,
+    "feature sd": 0.0
+  },
+  "AHP1_depth_from_peak.Step1.0": {
+    "feature mean": 52.86193625971984,
+    "feature sd": 0.0
+  },
+  "AHP2_depth_from_peak.Step0.8": {
+    "feature mean": 42.47975258694297,
+    "feature sd": 0.0
+  },
+  "AHP2_depth_from_peak.Step1.0": {
+    "feature mean": 18.950817645975427,
+    "feature sd": 0.0
+  },
+  "AHP_depth.Step0.8": {
+    "feature mean": 15.323972240841265,
+    "feature sd": 1.8415050941910212
+  },
+  "AHP_depth.Step1.0": {
+    "feature mean": 18.292960905227567,
+    "feature sd": 3.1598026584776204
+  },
+  "AHP_depth_abs.Step0.8": {
+    "feature mean": -48.46617539254539,
+    "feature sd": 1.8415050941910212
+  },
+  "AHP_depth_abs.Step1.0": {
+    "feature mean": -45.49718672815907,
+    "feature sd": 3.1598026584776204
+  },
+  "AHP_depth_diff.Step0.8": {
+    "feature mean": -0.20813289703315996,
+    "feature sd": 1.7158369530632331
+  },
+  "AHP_depth_diff.Step1.0": {
+    "feature mean": -0.45687515015957153,
+    "feature sd": 2.657824152335161
+  },
+  "AHP_depth_from_peak.Step0.8": {
+    "feature mean": 62.9408792717401,
+    "feature sd": 3.169347130596597
+  },
+  "AHP_depth_from_peak.Step1.0": {
+    "feature mean": 54.84436817561988,
+    "feature sd": 6.940554261602534
+  },
+  "AHP_time_from_peak.Step0.8": {
+    "feature mean": 4.191935483867236,
+    "feature sd": 0.11818300065576177
+  },
+  "AHP_time_from_peak.Step1.0": {
+    "feature mean": 3.846575342462403,
+    "feature sd": 0.2617549789034338
+  },
+  "AP1_peak.Step0.8": {
+    "feature mean": 17.80262016579679,
+    "feature sd": 0.0
+  },
+  "AP1_peak.Step1.0": {
+    "feature mean": 19.21273748938471,
+    "feature sd": 0.0
+  },
+  "AP2_AP1_peak_diff.Step0.8": {
+    "feature mean": -24.086949310301602,
+    "feature sd": 0.0
+  },
+  "AP2_AP1_peak_diff.Step1.0": {
+    "feature mean": -38.274938138836546,
+    "feature sd": 0.0
+  },
+  "AP2_amp.Step0.8": {
+    "feature mean": 24.591391288235172,
+    "feature sd": 0.0
+  },
+  "AP2_amp.Step1.0": {
+    "feature mean": 11.376349617326596,
+    "feature sd": 0.0
+  },
+  "AP2_begin_voltage.Step0.8": {
+    "feature mean": -30.875720432739985,
+    "feature sd": 0.0
+  },
+  "AP2_begin_voltage.Step1.0": {
+    "feature mean": -30.438550266778428,
+    "feature sd": 0.0
+  },
+  "AP2_begin_width.Step0.8": {
+    "feature mean": 1.7000000000003865,
+    "feature sd": 0.0
+  },
+  "AP2_begin_width.Step1.0": {
+    "feature mean": 2.1000000000004775,
+    "feature sd": 0.0
+  },
+  "AP2_peak.Step0.8": {
+    "feature mean": -6.284329144504814,
+    "feature sd": 0.0
+  },
+  "AP2_peak.Step1.0": {
+    "feature mean": -19.06220064945183,
+    "feature sd": 0.0
+  },
+  "AP2_width.Step0.8": {
+    "feature mean": 18.332996006473977,
+    "feature sd": 0.0
+  },
+  "AP2_width.Step1.0": {
+    "feature mean": 10.954511087789124,
+    "feature sd": 0.0
+  },
+  "AP_amplitude.Step0.8": {
+    "feature mean": 58.66096692136477,
+    "feature sd": 4.497569450963706
+  },
+  "AP_amplitude.Step1.0": {
+    "feature mean": 51.478019719042244,
+    "feature sd": 7.027027875814285
+  },
+  "AP_amplitude_change.Step0.8": {
+    "feature mean": -0.2810518067558837,
+    "feature sd": 0.05512216385888817
+  },
+  "AP_amplitude_change.Step1.0": {
+    "feature mean": -0.3798043901867205,
+    "feature sd": 0.08466005223979968
+  },
+  "AP_amplitude_from_voltagebase.Step0.8": {
+    "feature mean": 78.26485151258137,
+    "feature sd": 2.7507201290452366
+  },
+  "AP_amplitude_from_voltagebase.Step1.0": {
+    "feature mean": 73.13732908084744,
+    "feature sd": 5.4782101635338964
+  },
+  "AP_begin_voltage.Step0.8": {
+    "feature mean": -44.24081904686843,
+    "feature sd": 1.7801773104220315
+  },
+  "AP_begin_voltage.Step1.0": {
+    "feature mean": -42.26785988327484,
+    "feature sd": 1.741691827961097
+  },
+  "AP_begin_width.Step0.8": {
+    "feature mean": 3.972131147537403,
+    "feature sd": 0.31317053833125585
+  },
+  "AP_begin_width.Step1.0": {
+    "feature mean": 3.8597222222188035,
+    "feature sd": 0.29375902928010256
+  },
+  "AP_duration.Step0.8": {
+    "feature mean": 2.7327868852437405,
+    "feature sd": 2.1720822759737777
+  },
+  "AP_duration.Step1.0": {
+    "feature mean": 2.198611111109296,
+    "feature sd": 1.4033187900623598
+  },
+  "AP_duration_change.Step0.8": {
+    "feature mean": -0.34517543859723576,
+    "feature sd": 0.28237269934541187
+  },
+  "AP_duration_change.Step1.0": {
+    "feature mean": -0.40362173038296434,
+    "feature sd": 0.3003850964182033
+  },
+  "AP_duration_half_width.Step0.8": {
+    "feature mean": 1.2622950819660743,
+    "feature sd": 0.5560881916211511
+  },
+  "AP_duration_half_width.Step1.0": {
+    "feature mean": 1.211111111110166,
+    "feature sd": 1.0827633828357603
+  },
+  "AP_duration_half_width_change.Step0.8": {
+    "feature mean": -0.468750000000604,
+    "feature sd": 0.22993872472793572
+  },
+  "AP_duration_half_width_change.Step1.0": {
+    "feature mean": -0.5763813651142355,
+    "feature sd": 0.2183831056600511
+  },
+  "AP_fall_rate.Step0.8": {
+    "feature mean": -15.821622082171512,
+    "feature sd": 8.665373000443886
+  },
+  "AP_fall_rate.Step1.0": {
+    "feature mean": -13.049110312972838,
+    "feature sd": 8.704656613752277
+  },
+  "AP_fall_time.Step0.8": {
+    "feature mean": 1.7080645161275245,
+    "feature sd": 1.0457746607166505
+  },
+  "AP_fall_time.Step1.0": {
+    "feature mean": 1.265753424656422,
+    "feature sd": 1.0384682051807406
+  },
+  "AP_height.Step0.8": {
+    "feature mean": 14.474703879194726,
+    "feature sd": 2.750720129045236
+  },
+  "AP_height.Step1.0": {
+    "feature mean": 9.3471814474608,
+    "feature sd": 5.4782101635338964
+  },
+  "AP_rise_rate.Step0.8": {
+    "feature mean": 76.48787853120933,
+    "feature sd": 10.98941771208332
+  },
+  "AP_rise_rate.Step1.0": {
+    "feature mean": 62.813440041478266,
+    "feature sd": 10.232276198826531
+  },
+  "AP_rise_rate_change.Step0.8": {
+    "feature mean": 0.3338754613477767,
+    "feature sd": 0.08964943684512988
+  },
+  "AP_rise_rate_change.Step1.0": {
+    "feature mean": -0.07932665614422764,
+    "feature sd": 0.10409618887400869
+  },
+  "AP_rise_time.Step0.8": {
+    "feature mean": 1.0360655737698719,
+    "feature sd": 2.1001977102006504
+  },
+  "AP_rise_time.Step1.0": {
+    "feature mean": 0.9472222222215423,
+    "feature sd": 1.0750933063156436
+  },
+  "AP_width.Step0.8": {
+    "feature mean": 1.8836065573753584,
+    "feature sd": 0.0813418769181608
+  },
+  "AP_width.Step1.0": {
+    "feature mean": 1.798611111109499,
+    "feature sd": 0.211799863311181
+  },
+  "APlast_amp.Step0.8": {
+    "feature mean": 58.42830613210796,
+    "feature sd": 0.0
+  },
+  "APlast_amp.Step1.0": {
+    "feature mean": 52.35967036681283,
+    "feature sd": 0.0
+  },
+  "ISI_values.Step0.8": {
+    "feature mean": 6.206666666661037,
+    "feature sd": 0.19988885800730485
+  },
+  "ISI_values.Step1.0": {
+    "feature mean": 5.395774647882548,
+    "feature sd": 0.2645413888205093
+  },
+  "Spikecount.Step0.2": {
+    "feature mean": 32.0,
+    "feature sd": 0.0
+  },
+  "Spikecount.Step0.4": {
+    "feature mean": 47.0,
+    "feature sd": 0.0
+  },
+  "Spikecount.Step0.6": {
+    "feature mean": 56.0,
+    "feature sd": 0.0
+  },
+  "Spikecount.Step0.8": {
+    "feature mean": 62.0,
+    "feature sd": 0.0
+  },
+  "Spikecount.Step1.0": {
+    "feature mean": 73.0,
+    "feature sd": 0.0
+  },
+  "Spikecount_stimint.Step0.2": {
+    "feature mean": 32.0,
+    "feature sd": 0.0
+  },
+  "Spikecount_stimint.Step0.4": {
+    "feature mean": 46.0,
+    "feature sd": 0.0
+  },
+  "Spikecount_stimint.Step0.6": {
+    "feature mean": 56.0,
+    "feature sd": 0.0
+  },
+  "Spikecount_stimint.Step0.8": {
+    "feature mean": 62.0,
+    "feature sd": 0.0
+  },
+  "Spikecount_stimint.Step1.0": {
+    "feature mean": 73.0,
+    "feature sd": 0.0
+  },
+  "amp_drop_first_last.Step0.8": {
+    "feature mean": 3.260094158079573,
+    "feature sd": 0.0
+  },
+  "amp_drop_first_last.Step1.0": {
+    "feature mean": 9.624034959260781,
+    "feature sd": 0.0
+  },
+  "amp_drop_first_second.Step0.8": {
+    "feature mean": 24.086949310301602,
+    "feature sd": 0.0
+  },
+  "amp_drop_first_second.Step1.0": {
+    "feature mean": 38.274938138836546,
+    "feature sd": 0.0
+  },
+  "amp_drop_second_last.Step0.8": {
+    "feature mean": -20.82685515222203,
+    "feature sd": 0.0
+  },
+  "amp_drop_second_last.Step1.0": {
+    "feature mean": -28.650903179575764,
+    "feature sd": 0.0
+  },
+  "doublet_ISI.Step0.8": {
+    "feature mean": 21.700000000004934,
+    "feature sd": 0.0
+  },
+  "doublet_ISI.Step1.0": {
+    "feature mean": 14.500000000003297,
+    "feature sd": 0.0
+  },
+  "fast_AHP.Step0.8": {
+    "feature mean": 4.434988237078767,
+    "feature sd": 1.885275121645178
+  },
+  "fast_AHP.Step1.0": {
+    "feature mean": 3.1068490006246994,
+    "feature sd": 0.9725432142621606
+  },
+  "fast_AHP_change.Step0.8": {
+    "feature mean": -1.1495092473799993,
+    "feature sd": 0.024999191721502192
+  },
+  "inv_fifth_ISI.Step0.2": {
+    "feature mean": 77.51937984503175,
+    "feature sd": 0.0
+  },
+  "inv_fifth_ISI.Step0.4": {
+    "feature mean": 151.5151515152789,
+    "feature sd": 0.0
+  },
+  "inv_fifth_ISI.Step0.6": {
+    "feature mean": 138.88888888901522,
+    "feature sd": 0.0
+  },
+  "inv_fifth_ISI.Step0.8": {
+    "feature mean": 147.05882352954552,
+    "feature sd": 0.0
+  },
+  "inv_fifth_ISI.Step1.0": {
+    "feature mean": 166.66666666681826,
+    "feature sd": 0.0
+  },
+  "inv_first_ISI.Step0.2": {
+    "feature mean": 87.71929824559409,
+    "feature sd": 0.0
+  },
+  "inv_first_ISI.Step0.4": {
+    "feature mean": 131.57894736839114,
+    "feature sd": 0.0
+  },
+  "inv_first_ISI.Step0.6": {
+    "feature mean": 113.6363636363378,
+    "feature sd": 0.0
+  },
+  "inv_first_ISI.Step0.8": {
+    "feature mean": 46.082949308745285,
+    "feature sd": 0.0
+  },
+  "inv_first_ISI.Step1.0": {
+    "feature mean": 68.96551724136363,
+    "feature sd": 0.0
+  },
+  "inv_fourth_ISI.Step0.2": {
+    "feature mean": 77.51937984503175,
+    "feature sd": 0.0
+  },
+  "inv_fourth_ISI.Step0.4": {
+    "feature mean": 227.2727272726756,
+    "feature sd": 0.0
+  },
+  "inv_fourth_ISI.Step0.6": {
+    "feature mean": 181.81818181816303,
+    "feature sd": 0.0
+  },
+  "inv_fourth_ISI.Step0.8": {
+    "feature mean": 142.85714285727278,
+    "feature sd": 0.0
+  },
+  "inv_fourth_ISI.Step1.0": {
+    "feature mean": 200.0000000001819,
+    "feature sd": 0.0
+  },
+  "inv_last_ISI.Step0.2": {
+    "feature mean": 78.12500000007105,
+    "feature sd": 0.0
+  },
+  "inv_last_ISI.Step0.4": {
+    "feature mean": 111.11111111121217,
+    "feature sd": 0.0
+  },
+  "inv_last_ISI.Step0.6": {
+    "feature mean": 138.88888888901522,
+    "feature sd": 0.0
+  },
+  "inv_last_ISI.Step0.8": {
+    "feature mean": 163.9344262296573,
+    "feature sd": 0.0
+  },
+  "inv_last_ISI.Step1.0": {
+    "feature mean": 185.18518518535362,
+    "feature sd": 0.0
+  },
+  "inv_second_ISI.Step0.2": {
+    "feature mean": 83.33333333334676,
+    "feature sd": 0.0
+  },
+  "inv_second_ISI.Step0.4": {
+    "feature mean": 212.76595744676013,
+    "feature sd": 0.0
+  },
+  "inv_second_ISI.Step0.6": {
+    "feature mean": 238.09523809518396,
+    "feature sd": 0.0
+  },
+  "inv_second_ISI.Step0.8": {
+    "feature mean": 178.57142857156197,
+    "feature sd": 0.0
+  },
+  "inv_second_ISI.Step1.0": {
+    "feature mean": 249.99999999994316,
+    "feature sd": 0.0
+  },
+  "inv_third_ISI.Step0.2": {
+    "feature mean": 78.74015748038657,
+    "feature sd": 0.0
+  },
+  "inv_third_ISI.Step0.4": {
+    "feature mean": 232.55813953483084,
+    "feature sd": 0.0
+  },
+  "inv_third_ISI.Step0.6": {
+    "feature mean": 238.09523809518396,
+    "feature sd": 0.0
+  },
+  "inv_third_ISI.Step0.8": {
+    "feature mean": 144.92753623201588,
+    "feature sd": 0.0
+  },
+  "inv_third_ISI.Step1.0": {
+    "feature mean": 227.27272727268735,
+    "feature sd": 0.0
+  },
+  "inv_time_to_first_spike.Step0.2": {
+    "feature mean": 217.39130434027095,
+    "feature sd": 0.0
+  },
+  "inv_time_to_first_spike.Step0.4": {
+    "feature mean": 399.99999997449777,
+    "feature sd": 0.0
+  },
+  "inv_time_to_first_spike.Step0.6": {
+    "feature mean": 555.5555555064105,
+    "feature sd": 0.0
+  },
+  "inv_time_to_first_spike.Step0.8": {
+    "feature mean": 714.285714204521,
+    "feature sd": 0.0
+  },
+  "inv_time_to_first_spike.Step1.0": {
+    "feature mean": 833.3333332228518,
+    "feature sd": 0.0
+  },
+  "irregularity_index.Step0.8": {
+    "feature mean": 0.10499999999988935,
+    "feature sd": 0.0
+  },
+  "irregularity_index.Step1.0": {
+    "feature mean": 0.08169014084493208,
+    "feature sd": 0.0
+  },
+  "max_amp_difference.Step0.8": {
+    "feature mean": 24.086949310301602,
+    "feature sd": 0.0
+  },
+  "max_amp_difference.Step1.0": {
+    "feature mean": 38.274938138836546,
+    "feature sd": 0.0
+  },
+  "maximum_voltage.Step0.2": {
+    "feature mean": 17.056513699510084,
+    "feature sd": 0.0
+  },
+  "maximum_voltage.Step0.4": {
+    "feature mean": 17.13168867952355,
+    "feature sd": 0.0
+  },
+  "maximum_voltage.Step0.6": {
+    "feature mean": 17.066871298953693,
+    "feature sd": 0.0
+  },
+  "maximum_voltage.Step0.8": {
+    "feature mean": 17.80262016579679,
+    "feature sd": 0.0
+  },
+  "maximum_voltage.Step1.0": {
+    "feature mean": 19.21273748938471,
+    "feature sd": 0.0
+  },
+  "maximum_voltage_from_voltagebase.Step0.2": {
+    "feature mean": 80.84666133289673,
+    "feature sd": 0.0
+  },
+  "maximum_voltage_from_voltagebase.Step0.4": {
+    "feature mean": 80.92183631291019,
+    "feature sd": 0.0
+  },
+  "maximum_voltage_from_voltagebase.Step0.6": {
+    "feature mean": 80.85701893234034,
+    "feature sd": 0.0
+  },
+  "maximum_voltage_from_voltagebase.Step0.8": {
+    "feature mean": 81.59276779918343,
+    "feature sd": 0.0
+  },
+  "maximum_voltage_from_voltagebase.Step1.0": {
+    "feature mean": 83.00288512277135,
+    "feature sd": 0.0
+  },
+  "mean_frequency.Step0.8": {
+    "feature mean": 156.76359039197783,
+    "feature sd": 0.0
+  },
+  "mean_frequency.Step1.0": {
+    "feature mean": 183.0491474424081,
+    "feature sd": 0.0
+  },
+  "min_AHP_values.Step0.8": {
+    "feature mean": -48.46617539254539,
+    "feature sd": 1.8415050941910212
+  },
+  "min_AHP_values.Step1.0": {
+    "feature mean": -45.49718672815907,
+    "feature sd": 3.1598026584776204
+  },
+  "min_voltage_between_spikes.Step0.8": {
+    "feature mean": -48.582334896358525,
+    "feature sd": 1.140832949963741
+  },
+  "min_voltage_between_spikes.Step1.0": {
+    "feature mean": -45.24048258639953,
+    "feature sd": 1.7754013122048853
+  },
+  "minimum_voltage.Step-0.2": {
+    "feature mean": -81.59993547385852,
+    "feature sd": 0.0
+  },
+  "minimum_voltage.Step-0.4": {
+    "feature mean": -98.81189639615434,
+    "feature sd": 0.0
+  },
+  "minimum_voltage.Step-0.6": {
+    "feature mean": -114.91862368710477,
+    "feature sd": 0.0
+  },
+  "minimum_voltage.Step-0.8": {
+    "feature mean": -129.83236173764863,
+    "feature sd": 0.0
+  },
+  "minimum_voltage.Step-1.0": {
+    "feature mean": -143.50244878352058,
+    "feature sd": 0.0
+  },
+  "number_initial_spikes.Step0.2": {
+    "feature mean": 3.0,
+    "feature sd": 0.0
+  },
+  "number_initial_spikes.Step0.4": {
+    "feature mean": 6.0,
+    "feature sd": 0.0
+  },
+  "number_initial_spikes.Step0.6": {
+    "feature mean": 6.0,
+    "feature sd": 0.0
+  },
+  "number_initial_spikes.Step0.8": {
+    "feature mean": 4.0,
+    "feature sd": 0.0
+  },
+  "number_initial_spikes.Step1.0": {
+    "feature mean": 6.0,
+    "feature sd": 0.0
+  },
+  "peak_voltage.Step0.8": {
+    "feature mean": 14.474703879194726,
+    "feature sd": 2.750720129045236
+  },
+  "peak_voltage.Step1.0": {
+    "feature mean": 9.3471814474608,
+    "feature sd": 5.4782101635338964
+  },
+  "sag_amplitude.Step-0.2": {
+    "feature mean": 5.934662242149614,
+    "feature sd": 0.0
+  },
+  "sag_amplitude.Step-0.4": {
+    "feature mean": 13.914421089465094,
+    "feature sd": 0.0
+  },
+  "sag_amplitude.Step-0.6": {
+    "feature mean": 21.332098347672584,
+    "feature sd": 0.0
+  },
+  "sag_amplitude.Step-0.8": {
+    "feature mean": 26.868977287084746,
+    "feature sd": 0.0
+  },
+  "sag_amplitude.Step-1.0": {
+    "feature mean": 29.702358084221032,
+    "feature sd": 0.0
+  },
+  "sag_ratio1.Step-0.2": {
+    "feature mean": 0.33322475794256123,
+    "feature sd": 0.0
+  },
+  "sag_ratio1.Step-0.4": {
+    "feature mean": 0.3973080037698684,
+    "feature sd": 0.0
+  },
+  "sag_ratio1.Step-0.6": {
+    "feature mean": 0.4172253897272435,
+    "feature sd": 0.0
+  },
+  "sag_ratio1.Step-0.8": {
+    "feature mean": 0.40684549498395417,
+    "feature sd": 0.0
+  },
+  "sag_ratio1.Step-1.0": {
+    "feature mean": 0.37261950358550305,
+    "feature sd": 0.0
+  },
+  "sag_ratio2.Step-0.2": {
+    "feature mean": 0.6667752420574388,
+    "feature sd": 0.0
+  },
+  "sag_ratio2.Step-0.4": {
+    "feature mean": 0.6026919962301316,
+    "feature sd": 0.0
+  },
+  "sag_ratio2.Step-0.6": {
+    "feature mean": 0.5827746102727565,
+    "feature sd": 0.0
+  },
+  "sag_ratio2.Step-0.8": {
+    "feature mean": 0.5931545050160458,
+    "feature sd": 0.0
+  },
+  "sag_ratio2.Step-1.0": {
+    "feature mean": 0.627380496414497,
+    "feature sd": 0.0
+  },
+  "spike_half_width.Step0.8": {
+    "feature mean": 1.9061315525039324,
+    "feature sd": 2.1044880363290153
+  },
+  "spike_half_width.Step1.0": {
+    "feature mean": 1.7353550183787683,
+    "feature sd": 1.090020110383021
+  },
+  "spike_width2.Step0.8": {
+    "feature mean": 1.4954415758926993,
+    "feature sd": 0.05884802481299066
+  },
+  "spike_width2.Step1.0": {
+    "feature mean": 1.6387626682350396,
+    "feature sd": 1.061157437849642
+  },
+  "steady_state_hyper.Step-0.2": {
+    "feature mean": -75.66527408134814,
+    "feature sd": 0.0
+  },
+  "steady_state_hyper.Step-0.4": {
+    "feature mean": -84.89747446507157,
+    "feature sd": 0.0
+  },
+  "steady_state_hyper.Step-0.6": {
+    "feature mean": -93.5865248841894,
+    "feature sd": 0.0
+  },
+  "steady_state_hyper.Step-0.8": {
+    "feature mean": -102.96338450733317,
+    "feature sd": 0.0
+  },
+  "steady_state_hyper.Step-1.0": {
+    "feature mean": -113.80009108617135,
+    "feature sd": 0.0
+  },
+  "steady_state_voltage.Step-0.2": {
+    "feature mean": -63.332375528562295,
+    "feature sd": 0.0
+  },
+  "steady_state_voltage.Step-0.4": {
+    "feature mean": -62.75286250448304,
+    "feature sd": 0.0
+  },
+  "steady_state_voltage.Step-0.6": {
+    "feature mean": -62.60976555374371,
+    "feature sd": 0.0
+  },
+  "steady_state_voltage.Step-0.8": {
+    "feature mean": -62.47616936291794,
+    "feature sd": 0.0
+  },
+  "steady_state_voltage.Step-1.0": {
+    "feature mean": -62.423901296168026,
+    "feature sd": 0.0
+  },
+  "steady_state_voltage.Step0.2": {
+    "feature mean": -63.124569254385584,
+    "feature sd": 0.0
+  },
+  "steady_state_voltage.Step0.4": {
+    "feature mean": -62.466463959552996,
+    "feature sd": 0.0
+  },
+  "steady_state_voltage.Step0.6": {
+    "feature mean": -63.10149056311884,
+    "feature sd": 0.0
+  },
+  "steady_state_voltage.Step0.8": {
+    "feature mean": -63.00511001655078,
+    "feature sd": 0.0
+  },
+  "steady_state_voltage.Step1.0": {
+    "feature mean": -62.85558551494873,
+    "feature sd": 0.0
+  },
+  "steady_state_voltage_stimend.Step-0.2": {
+    "feature mean": -75.66527323170891,
+    "feature sd": 0.0
+  },
+  "steady_state_voltage_stimend.Step-0.4": {
+    "feature mean": -84.89747530668924,
+    "feature sd": 0.0
+  },
+  "steady_state_voltage_stimend.Step-0.6": {
+    "feature mean": -93.58652533943219,
+    "feature sd": 0.0
+  },
+  "steady_state_voltage_stimend.Step-0.8": {
+    "feature mean": -102.96338445056388,
+    "feature sd": 0.0
+  },
+  "steady_state_voltage_stimend.Step-1.0": {
+    "feature mean": -113.80009069929955,
+    "feature sd": 0.0
+  },
+  "time_to_first_spike.Step0.8": {
+    "feature mean": 1.4000000001591388,
+    "feature sd": 0.0
+  },
+  "time_to_first_spike.Step1.0": {
+    "feature mean": 1.2000000001590934,
+    "feature sd": 0.0
+  },
+  "time_to_last_spike.Step0.8": {
+    "feature mean": 395.4999999998263,
+    "feature sd": 0.0
+  },
+  "time_to_last_spike.Step1.0": {
+    "feature mean": 398.7999999998233,
+    "feature sd": 0.0
+  },
+  "time_to_second_spike.Step0.8": {
+    "feature mean": 23.100000000164073,
+    "feature sd": 0.0
+  },
+  "time_to_second_spike.Step1.0": {
+    "feature mean": 15.70000000016239,
+    "feature sd": 0.0
+  },
+  "voltage_after_stim.Step-0.2": {
+    "feature mean": -63.698290652507346,
+    "feature sd": 0.0
+  },
+  "voltage_after_stim.Step-0.4": {
+    "feature mean": -63.85002011684466,
+    "feature sd": 0.0
+  },
+  "voltage_after_stim.Step-0.6": {
+    "feature mean": -63.712197039614935,
+    "feature sd": 0.0
+  },
+  "voltage_after_stim.Step-0.8": {
+    "feature mean": -63.62348892499519,
+    "feature sd": 0.0
+  },
+  "voltage_after_stim.Step-1.0": {
+    "feature mean": -63.557914411079324,
+    "feature sd": 0.0
+  },
+  "voltage_after_stim.Step0.2": {
+    "feature mean": -63.4454310328779,
+    "feature sd": 0.0
+  },
+  "voltage_after_stim.Step0.4": {
+    "feature mean": -63.26540975594281,
+    "feature sd": 0.0
+  },
+  "voltage_after_stim.Step0.6": {
+    "feature mean": -63.21934743171055,
+    "feature sd": 0.0
+  },
+  "voltage_after_stim.Step0.8": {
+    "feature mean": -63.175586941980995,
+    "feature sd": 0.0
+  },
+  "voltage_after_stim.Step1.0": {
+    "feature mean": -63.140568257407025,
+    "feature sd": 0.0
+  },
+  "voltage_base.Step-0.2": {
+    "feature mean": -63.79014763338664,
+    "feature sd": 0.0
+  },
+  "voltage_base.Step-0.4": {
+    "feature mean": -63.79014763338664,
+    "feature sd": 0.0
+  },
+  "voltage_base.Step-0.6": {
+    "feature mean": -63.79014763338664,
+    "feature sd": 0.0
+  },
+  "voltage_base.Step-0.8": {
+    "feature mean": -63.79014763338664,
+    "feature sd": 0.0
+  },
+  "voltage_base.Step-1.0": {
+    "feature mean": -63.79014763338664,
+    "feature sd": 0.0
+  },
+  "voltage_base.Step0.2": {
+    "feature mean": -63.79014763338664,
+    "feature sd": 0.0
+  },
+  "voltage_base.Step0.4": {
+    "feature mean": -63.79014763338664,
+    "feature sd": 0.0
+  },
+  "voltage_base.Step0.6": {
+    "feature mean": -63.79014763338664,
+    "feature sd": 0.0
+  },
+  "voltage_base.Step0.8": {
+    "feature mean": -63.79014763338664,
+    "feature sd": 0.0
+  },
+  "voltage_base.Step1.0": {
+    "feature mean": -63.79014763338664,
+    "feature sd": 0.0
+  },
+  "voltage_deflection.Step-0.2": {
+    "feature mean": -11.868830207660586,
+    "feature sd": 0.0
+  },
+  "voltage_deflection.Step-0.4": {
+    "feature mean": -21.10103050393206,
+    "feature sd": 0.0
+  },
+  "voltage_deflection.Step-0.6": {
+    "feature mean": -29.790080941304645,
+    "feature sd": 0.0
+  },
+  "voltage_deflection.Step-0.8": {
+    "feature mean": -39.16694058663247,
+    "feature sd": 0.0
+  },
+  "voltage_deflection.Step-1.0": {
+    "feature mean": -50.00364717967323,
+    "feature sd": 0.0
+  },
+  "voltage_deflection_begin.Step-0.2": {
+    "feature mean": -13.694179812751962,
+    "feature sd": 0.0
+  },
+  "voltage_deflection_begin.Step-0.4": {
+    "feature mean": -23.945261843002974,
+    "feature sd": 0.0
+  },
+  "voltage_deflection_begin.Step-0.6": {
+    "feature mean": -33.907606129473386,
+    "feature sd": 0.0
+  },
+  "voltage_deflection_begin.Step-0.8": {
+    "feature mean": -44.31335782126393,
+    "feature sd": 0.0
+  },
+  "voltage_deflection_begin.Step-1.0": {
+    "feature mean": -55.525018358713005,
+    "feature sd": 0.0
+  },
+  "voltage_deflection_vb_ssse.Step-0.2": {
+    "feature mean": -11.87512559832227,
+    "feature sd": 0.0
+  },
+  "voltage_deflection_vb_ssse.Step-0.4": {
+    "feature mean": -21.107327673302606,
+    "feature sd": 0.0
+  },
+  "voltage_deflection_vb_ssse.Step-0.6": {
+    "feature mean": -29.796377706045547,
+    "feature sd": 0.0
+  },
+  "voltage_deflection_vb_ssse.Step-0.8": {
+    "feature mean": -39.17323681717724,
+    "feature sd": 0.0
+  },
+  "voltage_deflection_vb_ssse.Step-1.0": {
+    "feature mean": -50.00994306591291,
+    "feature sd": 0.0
+  }
+}

@@ -1,8 +1,0 @@
-I_maxNumAP (the current intensity for which the model exhibited the maximum number of APs) :1.4000000000000001 nA
-I_below_depol_block (the current intensity before the model enters depolarization block): nan nA
-Veq (the equilibrium value during the depolarization block): nan mV
----------------------------------------------------------------------------------------------------
-The model did not enter depolarization block.
----------------------------------------------------------------------------------------------------
-ZScore_avg+penalty = 100.00
----------------------------------------------------------------------------------------------------

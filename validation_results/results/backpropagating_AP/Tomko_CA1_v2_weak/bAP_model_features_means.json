@@ -1,34 +1,34 @@
 {
-    "model_AP1_amp_at_50um": {
-        "std": "1.2204195852853985 mV", 
-        "mean": "67.49409736322922 mV"
-    }, 
-    "model_AP1_amp_at_150um": {
-        "std": "0.42297394884914397 mV", 
-        "mean": "55.02384052585802 mV"
-    }, 
-    "model_AP1_amp_at_250um": {
-        "std": "2.69200266764328 mV", 
-        "mean": "37.7920187172562 mV"
-    }, 
-    "model_AP1_amp_at_350um": {
-        "std": "1.1116345982681146 mV", 
-        "mean": "14.746958616063882 mV"
-    }, 
-    "model_APlast_amp_at_50um": {
-        "std": "0.9756020070005746 mV", 
-        "mean": "65.7127255479009 mV"
-    }, 
-    "model_APlast_amp_at_150um": {
-        "std": "0.3492084916469125 mV", 
-        "mean": "54.7565153493759 mV"
-    }, 
-    "model_APlast_amp_at_250um": {
-        "std": "2.631359683240394 mV", 
-        "mean": "38.28179396646375 mV"
-    }, 
-    "model_APlast_amp_at_350um": {
-        "std": "1.170097271604547 mV", 
-        "mean": "14.74990129373704 mV"
-    }
+  "model_AP1_amp_at_50um": {
+    "mean": "66.19744707926151 mV",
+    "std": "0.0 mV"
+  },
+  "model_AP1_amp_at_150um": {
+    "mean": "53.416442151717106 mV",
+    "std": "0.0 mV"
+  },
+  "model_AP1_amp_at_250um": {
+    "mean": "31.925053393804593 mV",
+    "std": "2.5307334042248435 mV"
+  },
+  "model_AP1_amp_at_350um": {
+    "mean": "14.500657659534522 mV",
+    "std": "1.0955694634826365 mV"
+  },
+  "model_APlast_amp_at_50um": {
+    "mean": "64.63238969406775 mV",
+    "std": "0.0 mV"
+  },
+  "model_APlast_amp_at_150um": {
+    "mean": "53.29229657231134 mV",
+    "std": "0.0 mV"
+  },
+  "model_APlast_amp_at_250um": {
+    "mean": "32.48005482842053 mV",
+    "std": "2.5567651433971097 mV"
+  },
+  "model_APlast_amp_at_350um": {
+    "mean": "14.484901832276293 mV",
+    "std": "1.1473911440566837 mV"
+  }
 }
