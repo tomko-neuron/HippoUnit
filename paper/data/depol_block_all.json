@@ -1,0 +1,33 @@
+{
+  "CP15": {
+    "I_below_depol_block": null,
+    "I_maxNumAP": 1.6,
+    "Veq": null
+  },
+  "C10": {
+    "I_below_depol_block": null,
+    "I_maxNumAP": 1.6,
+    "Veq": null
+  },  
+  "Tu19": {
+    "I_below_depol_block": null,
+    "I_maxNumAP": 1.4,
+    "Veq": null
+  },
+  "To21": {
+    "I_below_depol_block": 1.2000000000000002,
+    "I_maxNumAP": 1.2000000000000002,
+    "Veq": -35.704198451192525
+  },
+  "M18": {
+    "I_below_depol_block": 1.35,
+    "I_maxNumAP": 1.35,
+    "Veq": -32.52535996961513
+  },
+  "experiment": {
+    "mean_Ith" : 0.6,
+    "Ith_std" : 0.3,
+    "mean_Veq" : -40.1,
+    "Veq_std" : 3.4
+  }
+}

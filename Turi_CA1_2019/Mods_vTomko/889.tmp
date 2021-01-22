@@ -1,1 +1,0 @@
-MODOBJFILES= BCMthreshold.o Exp2SynSTDP_multNNb_globBCM_intscount_precentred.o Exp2Syn_STDP_BCM_nearest_spike.o NMDA_CA1_pyr_SC.o STDPE2Syn.o

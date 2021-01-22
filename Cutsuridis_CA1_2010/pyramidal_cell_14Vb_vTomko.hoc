@@ -1,9 +1,10 @@
 // Network cell template
 // PyramidalCell
 // Geometry: 14 sections + axon
-// Active properties: from Poirazi et al, Neuron 2003
+// Active properties: from Migliore et al., 2018
 // Adjusted to get more decrementing BPAP
 // BPG & VCU, 2-1-09
+// Modified by Matus Tomko
 
 begintemplate PyramidalCell
 external lambda_f

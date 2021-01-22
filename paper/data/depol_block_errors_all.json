@@ -1,0 +1,27 @@
+{
+  "CP15": {
+    "Ith_error": null,
+    "Veq_error": null,
+    "I_maxNumAP_error": 3.3333333333333335
+  },
+  "C10": {
+    "Ith_error": null,
+    "Veq_error": null,
+    "I_maxNumAP_error": 3.3333333333333335
+  },
+  "Tu19": {
+    "Ith_error": null,
+    "Veq_error": null,
+    "I_maxNumAP_error": 2.6666666666666674
+  },
+  "To21": {
+    "Ith_error": 2.000000000000001,
+    "Veq_error": 1.2928828084727872,
+    "I_maxNumAP_error": 2.000000000000001
+  },
+  "M18": {
+    "Ith_error": 2.5000000000000004,
+    "Veq_error": 2.227835303054374,
+    "I_maxNumAP_error": 2.5000000000000004
+  }
+}

@@ -1,5 +1,6 @@
 /*
 Created by BluePyOpt(1.5.29) at 2017-10-02 15:36:31.146086
+Modified by Matus Tomko
 */
 {load_file("stdrun.hoc")}
 {load_file("import3d.hoc")}
@@ -53,8 +54,6 @@ proc init(/* args: morphology_dir, morphology_name */) {
   insertChannel()
   biophys()
   re_init_rng()
-  //bcm_treshold()
-  //bcm_synapses()
   access soma[0]
 }
 
@@ -431,93 +430,6 @@ proc re_init_rng() {localobj sf
   
 }
 
-public bcm
-objref bcm
-proc bcm_treshold(){
-	soma{
-		objref bcm
-		bcm = new BCMthreshold(.5)
-		bcm.p0 = 0.002 //0.002
-		bcm.d0 = 0.002 // 0.001
-		bcm.scount0 = 0.005 //0
-		bcm.scounttau = 60000
-		bcm.alpha_p = 120 //0.0025
-		bcm.alpha_d = 120
-	}
-}
-
-public list_of_bcm_synapses
-objref list_of_bcm_synapses, syn
-
-proc bcm_synapses(){local i
-	list_of_bcm_synapses = new List()
-	i = 0
-	forsec this.basal{
-	    node = 0.5
-		syn = insert_Exp2SynSTDP(syn, node)
-		if(i%3 == 0 || i%3 == 1){
-		    syn.pathway = 1 // commissural
-		}else{
-		    syn.pathway = 0 // Schaffer
-		}
-		list_of_bcm_synapses.append(syn)
-	    i = i + 1
-	}
-
-    i = 0
-	forsec this.apical{
-	    if (i<36 || i> 67){
-	        node = 0.5
-		    syn = insert_Exp2SynSTDP(syn, node)
-		    if(i%3 == 0 || i%3 == 1){
-		        syn.pathway = 0 // Schaffer
-		    }else{
-		        syn.pathway = 1 // commissural
-		    }
-		    list_of_bcm_synapses.append(syn)
-		}else{
-		    node = 0.5
-		    syn = insert_Exp2SynSTDP(syn, node)
-		    syn.pathway = 2 // Schaffer
-		    list_of_bcm_synapses.append(syn)
-		}
-	    i = i + 1
-	}
-}
-
-obfunc insert_Exp2SynSTDP(){
-	//$o1 = new Exp2Syn_STDP_BCM_nearest_spike($2)
-	$o1 = new Exp2SynSTDP_multNNb_globBCM_intscount_precentred($2)
-	$o1.tau1 = 0.5 	//ms
-	$o1.tau2 = 3 	//ms
-	$o1.e = 0	//mV
-	$o1.ptau = 20
-	$o1.dtau = 20
-	$o1.start = 0 //1000
-	setpointer $o1.d, bcm.d
-	setpointer $o1.p, bcm.p
-	return $o1
-}
-
-objref cell_shape
-
-proc showsyn() { local i
-  cell_shape = new Shape()
-  for i=0,list_of_bcm_synapses.count()-1 {
-    if (list_of_bcm_synapses.o(i).pathway == 0){
-        cell_shape.point_mark(list_of_bcm_synapses.o(i), 3)
-    }
-    if (list_of_bcm_synapses.o(i).pathway == 1){
-        cell_shape.point_mark(list_of_bcm_synapses.o(i), 2)
-    }
-    if (list_of_bcm_synapses.o(i).pathway == 2){
-        cell_shape.point_mark(list_of_bcm_synapses.o(i), 4)
-    }
-    if (list_of_bcm_synapses.o(i).pathway > 2 || list_of_bcm_synapses.o(i).pathway <0){
-        cell_shape.point_mark(list_of_bcm_synapses.o(i), 1)
-    }
-  }
-}
 endtemplate CA1_PC_cAC_sig6
 
 

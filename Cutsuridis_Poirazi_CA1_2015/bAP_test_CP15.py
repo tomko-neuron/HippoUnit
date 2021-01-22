@@ -1,3 +1,9 @@
+""" Produces modified bAP Test of HippoUnit """
+
+# _title_   : bAP_test_CP15.py
+# _author_  : Matus Tomko
+# _mail_    : matus.tomko __at__ fmph.uniba.sk
+
 import collections
 import efel
 import gzip

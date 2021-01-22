@@ -1,19 +1,26 @@
+""" Script to run HippoUnit validation tests and register the results.
+    Original ModelLoader class modified to run under MS Windows. """
+
+# _title_   : __init__.py
+# _author_  : Matus Tomko
+# _mail_    : matus.tomko __at__ fmph.uniba.sk
+
 from __future__ import print_function
+from multiprocessing import freeze_support
+from hippounit import tests
+from hippounit.utils import ModelLoader
+from json2html import *
+from neuron import h
 
 import collections
 import json
 import time
-from multiprocessing import freeze_support
-
 import IPython
 import numpy
 import numpy as np
 import pkg_resources
 import sciunit
-from hippounit import tests
-from hippounit.utils import ModelLoader
-from json2html import *
-from neuron import h
+
 
 
 class ModelLoader_CA1_Windows(ModelLoader):
@@ -388,11 +395,11 @@ def main():
         model = ModelLoader_CA1_Windows(mod_files_path = mod_files_path)
 
         # outputs will be saved in subfolders named like this:
-        model.name = "Cutsuridis_Poirazi_CA1_2015_time"
+        model.name = 'Cutsuridis_Poirazi_CA1_2015_time'
 
         # path to hoc file
         # the model must not display any GUI!!
-        model.hocpath = "CA1PC.hoc"
+        model.hocpath = 'CA1PC.hoc'
 
         # If the hoc file doesn't contain a template, this must be None (the default value is None)
         model.template_name = 'CA1PyramidalCell()'
@@ -403,7 +410,7 @@ def main():
         model.soma = None
 
         # For the PSP Attenuation Test, and Back-propagating AP Test a section list containing the trunk sections is needed
-        model.TrunkSecList_name = "trunk_sec_list"
+        model.TrunkSecList_name = 'trunk_sec_list'
         # For the Oblique Integration Test a section list containing the oblique dendritic sections is needed
         model.ObliqueSecList_name = 'oblique_dendrites'
 
@@ -426,8 +433,8 @@ def main():
         print('Execution time: ' + str(stop_time - start_time) + ' seconds')
         times.append(stop_time - start_time)
 
-    print("Execution times: " + str(times))
-    print("Average execution time: " + str(np.average(times)) + " seconds")
+    print('Execution times: ' + str(times))
+    print('Average execution time: ' + str(np.average(times)) + ' seconds')
 
 if __name__ == '__main__':
     freeze_support()

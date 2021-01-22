@@ -1,0 +1,27 @@
+{
+  "To21": {
+    "error_attenuation_soma/dend_100_um": 1.9160692042927714,
+    "error_attenuation_soma/dend_200_um": 0.7930343054979244,
+    "error_attenuation_soma/dend_300_um": 0.6680989254754223
+  },
+  "Tu19": {
+    "error_attenuation_soma/dend_100_um": 3.339312697641717,
+    "error_attenuation_soma/dend_200_um": 1.3301071390615786,
+    "error_attenuation_soma/dend_300_um": 1.2344413384197914
+  },
+  "C10": {
+    "error_attenuation_soma/dend_100_um": 3.263417023235641,
+    "error_attenuation_soma/dend_200_um": 2.0530049354576496,
+    "error_attenuation_soma/dend_300_um": 3.282084385542957
+  },
+  "CP15": {
+    "error_attenuation_soma/dend_100_um": 3.7386451544495127,
+    "error_attenuation_soma/dend_200_um": 3.1984647682837157,
+    "error_attenuation_soma/dend_300_um": 5.860262767061858
+  },
+  "M18": {
+    "error_attenuation_soma/dend_100_um": 1.1568943199061388,
+    "error_attenuation_soma/dend_200_um": 2.5791832671185397,
+    "error_attenuation_soma/dend_300_um": 3.696495578904199
+  }
+}

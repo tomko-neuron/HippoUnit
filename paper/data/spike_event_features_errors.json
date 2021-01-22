@@ -1,0 +1,67 @@
+{
+  "C10": {
+    "spike_count": 13.15679095,
+    "mean_frequency": 13.56401363,
+    "time_to_last_spike": 0.991594204,
+    "time_to_first_spike": 1.036670033,
+    "inv_time_to_first_spike": 5.10840715,
+    "inv_first_ISI": 1.684359689,
+    "inv_second_ISI": 6.699526089,
+    "inv_third_ISI": 10.64648954,
+    "inv_fourth_ISI": 12.15790459,
+    "inv_fifth_ISI": 11.55871289,
+    "inv_last_ISI": 15.83399683
+  },
+  "CP15": {
+    "spike_count": 1.3612,
+    "mean_frequency": 17.3255,
+    "time_to_last_spike": 1.7650,
+    "time_to_first_spike": 0.9135,
+    "inv_time_to_first_spike": 1.4669,
+    "inv_first_ISI": 1.5157,
+    "inv_second_ISI": 1.4658,
+    "inv_third_ISI": 1.436965475,
+    "inv_fourth_ISI": 1.295790304,
+    "inv_fifth_ISI": 1.018809356,
+    "inv_last_ISI": 1.5757
+  },
+  "Tu19": {
+    "spike_count": 10.15639955,
+    "mean_frequency": 10.79929073,
+    "time_to_last_spike":0.986536594,
+    "time_to_first_spike": 0.988163584,
+    "inv_time_to_first_spike": 3.259396039,
+    "inv_first_ISI": 1.536240708,
+    "inv_second_ISI": 4.245719638,
+    "inv_third_ISI": 5.965105381,
+    "inv_fourth_ISI": 8.449083458,
+    "inv_fifth_ISI": 7.700417518,
+    "inv_last_ISI": 12.4672921
+  },
+  "To21": {
+    "spike_count": 1.0754,
+    "mean_frequency": 0.9896,
+    "time_to_last_spike": 0.3329,
+    "time_to_first_spike": 0.7231,
+    "inv_time_to_first_spike": 0.5623,
+    "inv_first_ISI": 0.9406,
+    "inv_second_ISI": 0.9554,
+    "inv_third_ISI": 0.9332,
+    "inv_fourth_ISI": 0.8761,
+    "inv_fifth_ISI": 0.6767,
+    "inv_last_ISI": 1.1707
+  },
+  "M18": {
+    "spike_count": 0.647714864,
+    "mean_frequency": 0.263286145,
+    "time_to_last_spike": 0.754521158,
+    "time_to_first_spike": 0.797834341,
+    "inv_time_to_first_spike": 0.764745796,
+    "inv_first_ISI": 0.45664019,
+    "inv_second_ISI": 0.363163194,
+    "inv_third_ISI": 0.356918803,
+    "inv_fourth_ISI": 0.298428736,
+    "inv_fifth_ISI": 0.303949616,
+    "inv_last_ISI": 0.843929838
+  }
+}

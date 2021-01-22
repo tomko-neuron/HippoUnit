@@ -4,6 +4,7 @@
 // Active properties: from Poirazi et al, Neuron 2003
 // Adjusted to get more decrementing BPAP
 // BPG & VCU, 2-1-09
+// Modified by Matus Tomko
 
 begintemplate CA1PyramidalCell
 public is_art
@@ -25,7 +26,6 @@ proc init() {
   biophys()
   geom_nseg()
   pre_list = new List()
-  // synapses()
 }
 
 create soma, oriprox1, oridist1, oriprox2, oridist2, axon, radTprox

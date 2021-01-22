@@ -1,10 +1,14 @@
+""" Script to run HippoUnit validation tests and register the results.
+    Original ModelLoader class modified to run under MS Windows. """
+
+# _title_   : __init__.py
+# _author_  : Matus Tomko
+# _mail_    : matus.tomko __at__ fmph.uniba.sk
+
 from __future__ import print_function
-
 from hippounit.utils import ModelLoader
-
 from hippounit import tests
 from multiprocessing import freeze_support
-
 from json2html import *
 import pkg_resources
 import json
@@ -76,7 +80,7 @@ class ModelLoader_CA1_Windows(ModelLoader):
 
     def load_mod_files(self):
 
-        h.nrn_load_dll('./Mods/nrnmech.dll')
+        h.nrn_load_dll(self.modelpath + 'nrnmech.dll')
 
     def initialise(self):
 
@@ -191,7 +195,7 @@ def somatic_features_test_JMakara_dataset(model, base_directory):
         print(e)
         pass
 
-def PSP_attenuatuion_test(model, base_directory):
+def PSP_attenuation_test(model, base_directory):
     # Load target data
     with open("../target_features/feat_PSP_attenuation_target_data.json", 'r') as f:
         observation = json.load(f, object_pairs_hook=collections.OrderedDict)
@@ -323,47 +327,58 @@ def abandon_gil():
 
 
 def main():
-    # path to mod files
-    mod_files_path = './Mods/'
+    times = []
+    for i in range(1):
+        # path to mod files
+        mod_files_path = './Mods/'
 
-    #all the outputs will be saved here. It will be an argument to the test.
-    base_directory = '../validation_results/'
+        #all the outputs will be saved here. It will be an argument to the test.
+        base_directory = '../validation_results/'
 
-    #Load cell model
-    model = ModelLoader_CA1_Windows(mod_files_path = mod_files_path)
+        #Load cell model
+        model = ModelLoader_CA1_Windows(mod_files_path = mod_files_path)
 
-    # outputs will be saved in subfolders named like this:
-    model.name="Tomko_CA1_v2_weak"
+        # outputs will be saved in subfolders named like this:
+        model.name='Tomko_CA1_v2_weak'
 
-    # path to hoc file
-    # the model must not display any GUI!!
-    model.hocpath = "pyramidal_cell_extended_v2_opt_weak_bAP.hoc"
+        # path to hoc file
+        # the model must not display any GUI!!
+        model.hocpath = 'pyramidal_cell_extended_v2_opt_weak_bAP.hoc'
 
-    # If the hoc file doesn't contain a template, this must be None (the default value is None)
-    model.template_name = 'CA1_PC_Tomko()'
+        # If the hoc file doesn't contain a template, this must be None (the default value is None)
+        model.template_name = 'CA1_PC_Tomko()'
 
-    # model.SomaSecList_name should be None, if there is no Section List in the model for the soma, or if the name of the soma section is given by setting model.soma (the default value is None)
-    model.SomaSecList_name = 'soma[0]'
-    # if the soma is not in a section list or to use a specific somatic section, add its name here:
-    model.soma = None
+        # model.SomaSecList_name should be None, if there is no Section List in the model for the soma, or if the name of the soma section is given by setting model.soma (the default value is None)
+        model.SomaSecList_name = 'soma[0]'
+        # if the soma is not in a section list or to use a specific somatic section, add its name here:
+        model.soma = None
 
-    # For the PSP Attenuation Test, and Back-propagating AP Test a section list containing the trunk sections is needed
-    model.TrunkSecList_name = 'trunk_sec_list'
-    # For the Oblique Integration Test a section list containing the oblique dendritic sections is needed
-    model.ObliqueSecList_name = 'oblique_sec_list'
+        # For the PSP Attenuation Test, and Back-propagating AP Test a section list containing the trunk sections is needed
+        model.TrunkSecList_name = 'trunk_sec_list'
+        # For the Oblique Integration Test a section list containing the oblique dendritic sections is needed
+        model.ObliqueSecList_name = 'oblique_sec_list'
 
-    # It is important to set the v_init and the celsius parameters of the simulations here,
-    # as if they are only set in the model's files, they will be overwritten with the default values of the ModelLoader class.
-    # default values: v_init = -70, celsius = 34
-    model.v_init = -65
-    model.celsius = 35
+        # It is important to set the v_init and the celsius parameters of the simulations here,
+        # as if they are only set in the model's files, they will be overwritten with the default values of the ModelLoader class.
+        # default values: v_init = -70, celsius = 34
+        model.v_init = -65
+        model.celsius = 35
 
-    somatic_features_test_UCL_dataset(model=model, base_directory=base_directory)
-    somatic_features_test_JMakara_dataset(model=model, base_directory=base_directory)
-    PSP_attenuatuion_test(model=model, base_directory=base_directory)
-    backprop_AP_test(model=model, base_directory=base_directory)
-    depolarization_block_test(model=model, base_directory=base_directory)
-    oblique_integration_test(model=model, base_directory=base_directory)
+        start_time = time.time()
+
+        somatic_features_test_UCL_dataset(model=model, base_directory=base_directory)
+        somatic_features_test_JMakara_dataset(model=model, base_directory=base_directory)
+        depolarization_block_test(model=model, base_directory=base_directory)
+        PSP_attenuation_test(model=model, base_directory=base_directory)
+        backprop_AP_test(model=model, base_directory=base_directory)
+        oblique_integration_test(model=model, base_directory=base_directory)
+
+        stop_time = time.time()
+        print('Execution time: ' + str(stop_time - start_time) + ' seconds')
+        times.append(stop_time - start_time)
+
+    print('Execution times: ' + str(times))
+    print('Average execution time: ' + str(numpy.average(times)) + ' seconds')
 
 if __name__ == '__main__':
     freeze_support()

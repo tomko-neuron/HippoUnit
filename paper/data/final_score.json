@@ -1,0 +1,66 @@
+{
+  "CP15": {
+    "somatic_features_score": 2.2175583949417654,
+    "depol_block_score": null,
+    "PSP_attenuation_score": 4.265790896598362,
+    "bAP_weak_score": 5.869911650042368,
+    "bAP_strong_score": 3.7958946686434194,
+    "oblique_integration_score": null
+  },
+  "CP15 vTo21": {
+    "somatic_features_score": 1.3068336302007082,
+    "depol_block_score": 1.9707689257047998,
+    "PSP_attenuation_score": 1.4289378970082218,
+    "bAP_weak_score": 2.5832986330973617,
+    "bAP_strong_score": 3.1609260828784516,
+    "oblique_integration_score": null
+  },
+  "C10": {
+    "somatic_features_score": 5.3364969903667605,
+    "depol_block_score": null,
+    "PSP_attenuation_score": 2.866168781412082,
+    "bAP_weak_score": 4.239947357906361,
+    "bAP_strong_score": 3.454083088705864,
+    "oblique_integration_score": null
+  },
+  "C10 vTo21": {
+    "somatic_features_score": 1.7598646402026448,
+    "depol_block_score": 1.3200729241621119,
+    "PSP_attenuation_score": 2.191601244919408,
+    "bAP_weak_score": 2.2876278224226283,
+    "bAP_strong_score": 2.764909918924517,
+    "oblique_integration_score": null
+  },
+  "Tu19": {
+    "somatic_features_score": 3.585348891481292,
+    "depol_block_score": null,
+    "PSP_attenuation_score": 1.9679537250410288,
+    "bAP_weak_score": 4.096898433766994,
+    "bAP_strong_score": 3.337593721487845,
+    "oblique_integration_score": 2.1414564505097577
+  },
+  "Tu19 vTo21": {
+    "somatic_features_score": 1.3019658526743159,
+    "depol_block_score": 22.0815670087138,
+    "PSP_attenuation_score": 1.3375477259214723,
+    "bAP_weak_score": 2.3495232570047877,
+    "bAP_strong_score": 2.843647449597216,
+    "oblique_integration_score": null
+  },
+  "To21": {
+    "somatic_features_score": 1.3904509880157645,
+    "depol_block_score": 1.7642942694909296,
+    "PSP_attenuation_score": 1.125734145088706,
+    "bAP_weak_score": 1.979806663101808,
+    "bAP_strong_score": 2.509505560694363,
+    "oblique_integration_score": 1.4071957196604978
+  },
+  "M18": {
+    "somatic_features_score": 1.3610343113971524,
+    "depol_block_score": 2.4092784343514584,
+    "PSP_attenuation_score": 2.477524388642959,
+    "bAP_weak_score": 10.664115401426846,
+    "bAP_strong_score": 8.018499344304386,
+    "oblique_integration_score": 1.823321451187488
+  }
+}

@@ -1,0 +1,58 @@
+{
+  "CP15": {
+    "somatic_features": 175.06,
+    "depol_block": 105.27,
+    "PSP_attenuation": 24.74,
+    "bAP": null,
+    "oblique_integration": null
+  },
+  "CP15 vTo21": {
+    "somatic_features": 180.58,
+    "depol_block": 122.63,
+    "PSP_attenuation": 24.31,
+    "bAP": 75.09,
+    "oblique_integration": null
+  },
+  "C10": {
+    "somatic_features": 175.78,
+    "depol_block": 97.98,
+    "PSP_attenuation": 25.98,
+    "bAP": 214.83,
+    "oblique_integration": null
+  },
+  "C10 vTo21": {
+    "somatic_features": 188.44,
+    "depol_block": 116.59,
+    "PSP_attenuation": 24.75,
+    "bAP": 110.75,
+    "oblique_integration": null
+  },
+  "Tu19": {
+    "somatic_features": 184.79,
+    "depol_block": 133.58,
+    "PSP_attenuation": 31.56,
+    "bAP": 300.87,
+    "oblique_integration": 202.82
+  },
+  "Tu19 vTo21": {
+    "somatic_features": 192.11,
+    "depol_block": 155.34,
+    "PSP_attenuation": 27.22,
+    "bAP": 92.95,
+    "oblique_integration": null
+  },
+  "To21": {
+    "somatic_features": 216.71,
+    "depol_block": 297.78,
+    "PSP_attenuation": 85.61,
+    "bAP": 164.53,
+    "oblique_integration": 359.34
+  },
+  "M18": {
+    "somatic_features": 450.39,
+    "depol_block": 1099.34,
+    "PSP_attenuation": 278.54,
+    "bAP": 654.43,
+    "oblique_integration": 2494.71
+  }
+}

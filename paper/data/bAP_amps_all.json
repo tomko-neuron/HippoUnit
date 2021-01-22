@@ -1,0 +1,160 @@
+{
+  "CP15": {
+    "('CA1PyramidalCell[0].radTprox', 0.5)": {
+      "AP1_amp": 60.54150455131976,
+      "APlast_amp": 61.559049087184206,
+      "actual_distance": 50.0
+    },
+    "('CA1PyramidalCell[0].radTmed', 0.5)": {
+      "AP1_amp": 58.32864465962025,
+      "APlast_amp": 60.45680791358879,
+      "actual_distance": 150.0
+    },
+    "('CA1PyramidalCell[0].radTdist', 0.3)": {
+      "AP1_amp": 51.46571634567857,
+      "APlast_amp": 53.25855191192098,
+      "actual_distance": 260.0
+    },
+    "('CA1PyramidalCell[0].radTdist', 0.7)": {
+      "AP1_amp": 50.49182081801197,
+      "APlast_amp": 51.350664393149295,
+      "actual_distance": 340.0
+    }
+  },
+  "C10": {
+    "('PyramidalCell[0].radTprox', 0.5)": {
+      "AP1_amp": 68.25172982215985,
+      "APlast_amp": 68.8295740809036,
+      "actual_distance": 50.0
+    },
+    "('PyramidalCell[0].radTmed', 0.5)": {
+      "AP1_amp": 57.991625527983864,
+      "APlast_amp": 58.62015876274685,
+      "actual_distance": 150.0
+    },
+    "('PyramidalCell[0].radTdist', 0.21428571428571427)": {
+            "AP1_amp": 47.895493685809186,
+            "APlast_amp": 48.495376664210845,
+            "actual_distance": 242.85714285714286
+    },
+    "('PyramidalCell[0].radTdist', 0.7857142857142856)": {
+            "AP1_amp": 35.89247762332393,
+            "APlast_amp": 36.34655051495993,
+            "actual_distance": 357.1428571428571
+    }
+  },  
+  "Tu19": {
+    "('PyramidalCell[0].radTprox', 0.5)": {
+            "AP1_amp": 64.15563250739518,
+            "APlast_amp": 64.59416542077676,
+            "actual_distance": 50.0
+    },
+    "('PyramidalCell[0].radTmed', 0.5)": {
+            "AP1_amp": 54.62240259704433,
+            "APlast_amp": 55.1970499898368,
+            "actual_distance": 150.0
+    },
+    "('PyramidalCell[0].radTdist', 0.21428571428571427)": {
+            "AP1_amp": 46.78948314509945,
+            "APlast_amp": 47.329348900078195,
+            "actual_distance": 242.85714285714286
+    },
+    "('PyramidalCell[0].radTdist', 0.7857142857142856)": {
+            "AP1_amp": 35.591463556496514,
+            "APlast_amp": 36.07878441930741,
+            "actual_distance": 357.1428571428571
+    }
+  },
+  "To21": {
+    "('CA1_PC_Tomko[0].radTprox', 0.5)": {
+      "AP1_amp": 66.19744707926151,
+      "APlast_amp": 64.63238969406775,
+      "actual_distance": 50.0
+    },
+    "('CA1_PC_Tomko[0].radTmed', 0.5)": {
+      "AP1_amp": 53.416442151717106,
+      "APlast_amp": 53.29229657231134,
+      "actual_distance": 150.0
+    },
+    "('CA1_PC_Tomko[0].radTdist', 0.22727272727272727)": {
+            "AP1_amp": 34.455786798029436,
+            "APlast_amp": 35.036819971817636,
+            "actual_distance": 245.45454545454544
+    },
+    "('CA1_PC_Tomko[0].radTdist', 0.3181818181818182)": {
+            "AP1_amp": 29.39431998957975,
+            "APlast_amp": 29.923289685023416,
+            "actual_distance": 263.6363636363636
+    },
+    "('CA1_PC_Tomko[0].radTdist', 0.6818181818181819)": {
+            "AP1_amp": 15.596227123017158,
+            "APlast_amp": 15.632292976332977,
+            "actual_distance": 336.3636363636364
+    },
+    "('CA1_PC_Tomko[0].radTdist', 0.7727272727272728)": {
+            "AP1_amp": 13.405088196051885,
+            "APlast_amp": 13.33751068821961,
+            "actual_distance": 354.5454545454545
+    }
+  },
+  "M18": {
+    "('CA1_PC_cAC_sig6[0].apic[0]', 0.5)": {
+            "AP1_amp": 92.06257057971158,
+            "APlast_amp": 90.81999475221997,
+            "actual_distance": 43.78914534774707
+    },
+    "('CA1_PC_cAC_sig6[0].apic[0]', 0.8333333333333333)": {
+            "AP1_amp": 93.25837236435245,
+            "APlast_amp": 91.94472971726479,
+            "actual_distance": 66.92888532291228
+    },
+    "('CA1_PC_cAC_sig6[0].apic[11]', 0.5)": {
+            "AP1_amp": 95.17379040615612,
+            "APlast_amp": 94.44096829743334,
+            "actual_distance": 134.87160232249843
+    },
+    "('CA1_PC_cAC_sig6[0].apic[13]', 0.5)": {
+            "AP1_amp": 94.20324415581345,
+            "APlast_amp": 93.66823915068679,
+            "actual_distance": 156.61747087881966
+    },
+    "('CA1_PC_cAC_sig6[0].apic[21]', 0.5)": {
+            "AP1_amp": 82.60270982443716,
+            "APlast_amp": 82.45598338773165,
+            "actual_distance": 249.03009828970883
+    },
+    "('CA1_PC_cAC_sig6[0].apic[31]', 0.5)": {
+            "AP1_amp": 61.19829071061736,
+            "APlast_amp": 61.17788633633883,
+            "actual_distance": 335.71463287033407
+    }
+  },
+  "exp": {
+    "50": {
+      "AP1_amp": 66.6474010216,
+      "AP1_amp_std": 7.6800611053,
+      "APlast_amp": 56.0027067193,
+      "APlast_amp_std": 6.66451614848
+    },
+    "150": {
+      "AP1_amp": 61.6405452338,
+      "AP1_amp_std": 8.84061901299,
+      "APlast_amp": 41.6724147741,
+      "APlast_amp_std": 7.62175409041
+    },
+    "250": {
+      "AP1_amp": 57.1478276286,
+      "AP1_amp_std": 6.74288151869,
+      "APlast_amp": 21.1507839635,
+      "APlast_amp_std": 2.39551093081
+    },
+    "350": {
+      "AP1_weak_amp": 18.7832282514,
+      "AP1_weak_amp_std": 1.87203344953,
+      "AP1_strong_amp": 52.5065653152,
+      "AP1_strong_amp_std": 5.82443856294,
+      "APlast_amp": 9.81008709754,
+      "APlast_amp_std": 3.67378280696
+    }
+  }
+}
