@@ -26,3 +26,15 @@ The **Tomko et al. (2021) — To21 model** is our new reduced-morphology model o
 
 ## Visualization of the To21 model and its activity
 ![To21 model](model.gif)
+
+## Paper
+The *paper* folder of this repository contains python scripts and files needed for generating figures used in our [paper](https://www.nature.com/articles/s41598-021-87002-7).
+
+## Target features
+The *target_features* folder of this repository contains the target experimental data to each tests of HippoUnit in JSON files to which the models' behaviour are compared quantitatively.
+
+## Validation results
+The *validation_results* folder of this repository contains all the outputs of the tests of HippoUnit that were obtained by running HippoUnit tests.
+
+## Acknowledgments
+We acknowledge the financial support from the National Scholarship Programme of the Slovak Republic provided by the Slovak Academic Information Agency (SAIA) to M.T. This work was supported by BMBF (No. 031L0229—HUMANEUROMOD) to P.J. We thank Julia Muellerleile and Nick Hananeia for reading the manuscript.
