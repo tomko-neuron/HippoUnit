@@ -7,15 +7,15 @@
 
 import os, pickle, gzip
 from matplotlib import pyplot as plt
-from neuron import h, gui
+from neuron import h, gui, load_mechanisms
 
 savepath = './figs/'
 if not os.path.exists(savepath):
     os.mkdir(savepath)
 
 def main():
-    weight_dist = 0.0005
-    weight_prox = 0.0012
+    weight_dist = 0.0008
+    weight_prox = 0.0023
     stim_start = 150
     stim_interval = 0.2
     ampa_list = []
@@ -23,19 +23,20 @@ def main():
     nc_list = []
     ns_list = []
 
-    h.nrn_load_dll('./Mods/nrnmech.dll')
+    # h.nrn_load_dll('./Mods/nrnmech.dll')
+    load_mechanisms('./Mods/')
     h.xopen('pyramidal_cell_extended_v2_opt_weak_bAP.hoc')
     cell = h.CA1_PC_Tomko()
 
     for i in range(5):
         ampa_syn_prox = h.Exp2Syn(cell.rad_t2(0.2))
         ampa_syn_prox.tau1 = 0.1
-        ampa_syn_prox.tau1 = 2.0
+        ampa_syn_prox.tau2 = 2.0
         ampa_list.append(ampa_syn_prox)
 
         ampa_syn_dist = h.Exp2Syn(cell.rad_t2(0.8))
         ampa_syn_dist.tau1 = 0.1
-        ampa_syn_dist.tau1 = 2.0
+        ampa_syn_dist.tau2 = 2.0
         ampa_list.append(ampa_syn_dist)
 
         nmda_syn_prox = h.NMDA_CA1_pyr_SC(cell.rad_t2(0.2))
