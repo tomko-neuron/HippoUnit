@@ -142,9 +142,9 @@ proc subsets() {
   radTdist trunk_sec_list.append()
 
   oblique_sec_list = new SectionList()
-  //rad_t1 oblique_sec_list.append()
+  rad_t1 oblique_sec_list.append()
   rad_t2 oblique_sec_list.append()
-  //rad_t3 oblique_sec_list.append()
+  rad_t3 oblique_sec_list.append()
 }
 
 proc geom() {
@@ -250,8 +250,8 @@ proc insertChannel() {
 }
 proc biophys() {
 
-    celsius = 35 //37
-    v_init = -65 //-70
+    celsius = 35
+    v_init = -65
 
     forsec all {
     cm = 1
@@ -261,21 +261,21 @@ proc biophys() {
 
     // opt for depolarization block
     forsec somatic {
-        gkabar_kap = 0.0075 // 0.075979013614757188
-        gbar_kmb = 0.001 // 0.0054486096208209286
-        gkdrbar_kdr = 0.0015 //0.0043036502438625682
-        gbar_nax = 0.035 //0.0035 // 0.038280628170345957
-        gcalbar_cal =  0.0005 //8.0324964335287e-06
+        gkabar_kap = 0.0075
+        gbar_kmb = 0.001
+        gkdrbar_kdr = 0.0015
+        gbar_nax = 0.035
+        gcalbar_cal =  0.0005
         gcanbar_can = 2.2618914062501833e-06
-        gcatbar_cat =  0.00005 // 1.184948741542104e-06
-        gbar_kca = 0.0015 //9.0311387916396796e-05
+        gcatbar_cat =  0.00005
+        gbar_kca = 0.0015
         gbar_cagk = 4.4820097108998517e-05
         Ra = 115.3957607556371
         g_pas = 9.031387191839301e-05
     }
 
     forsec axonal {
-        gbar_nax = 0.035 //0.21113423945477339
+        gbar_nax = 0.035
         gkdrbar_kdr = 0.011664045469379856
         gbar_kmb = 0.026473888790212396
         gkabar_kap = 0.1636942175250268
@@ -285,8 +285,8 @@ proc biophys() {
     }
 
     forsec apical {
-        gkdrbar_kdr = 0.0043036502438625682 //0.02
-        gbar_nax = 0.038280628170345957 //0.025
+        gkdrbar_kdr = 0.0043036502438625682
+        gbar_nax = 0.038280628170345957
         gcalbar_cal = 8.0324964335287e-06
         gcanbar_can = 2.2618914062501833e-06
         gcatbar_cat = 1.184948741542104e-06
@@ -332,13 +332,13 @@ proc biophys() {
     distribute_distance(somatic, "e_pas", "(-65.726902768520958-5*%.17g/150)")
 
     radTprox {gkabar_kad = 0.1}
-    //rad_t1 {gkabar_kad = 0.1}
+    rad_t1 {gkabar_kad = 0.1}
     radTmed {gkabar_kad = 0.15}
     rad_t2 {gkabar_kad = 0.1
     gbar_nax = 0.038
     gkdrbar_kdr = 0.002}
     radTdist {gkabar_kad = 0.2}
-    //rad_t3 {gkabar_kad = 0.25}
+    rad_t3 {gkabar_kad = 0.25}
 }
 
 
